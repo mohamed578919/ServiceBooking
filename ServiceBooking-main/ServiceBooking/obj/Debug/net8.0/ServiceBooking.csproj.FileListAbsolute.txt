@@ -146,3 +146,5 @@ H:\my projects\graduation project\version one\ServiceBooking-main\ServiceBooking
 H:\my projects\graduation project\version one\ServiceBooking-main\ServiceBooking\obj\Debug\net8.0\ServiceBooking.pdb
 H:\my projects\graduation project\version one\ServiceBooking-main\ServiceBooking\obj\Debug\net8.0\ServiceBooking.genruntimeconfig.cache
 H:\my projects\graduation project\version one\ServiceBooking-main\ServiceBooking\obj\Debug\net8.0\ref\ServiceBooking.dll
+H:\my projects\graduation project\version one\ServiceBooking-main\ServiceBooking\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+H:\my projects\graduation project\version one\ServiceBooking-main\ServiceBooking\obj\Debug\net8.0\ServiceBooking.sourcelink.json
