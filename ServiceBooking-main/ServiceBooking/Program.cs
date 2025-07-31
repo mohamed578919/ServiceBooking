@@ -1,53 +1,79 @@
-
-using System.Text;
+﻿using System.Text;
 using ApiDay1.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Identity;
+using ServiceBooking.Models;
 
 namespace ServiceBooking
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)  // ✅ خلي Main async
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<MyContext>(option => { option.UseSqlServer(builder.Configuration.GetConnectionString("Constring1")); });
 
-            // Configure JWT Authentication
+            builder.Services.AddDbContext<MyContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("Constring1")));
 
-            // Add Authentication
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
+            builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<MyContext>()
+                .AddDefaultTokenProviders();
+
+            // JWT Key
+            var key = Encoding.UTF8.GetBytes("SuperStrongKey_Androw2025_123456");
+
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(options =>
+            {
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "AndrowAPI",
+                    ValidAudience = "AndrowClient",
+                    IssuerSigningKey = new SymmetricSecurityKey(key)
+                };
+            });
 
-                        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                        ValidAudience = builder.Configuration["Jwt:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-                    };
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                 });
-
-            // Add Authorization
-            builder.Services.AddAuthorization();
-
-
+            });
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
+            // ✅ إضافة الـ Roles هنا
+            using (var scope = app.Services.CreateScope())
+            {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                string[] roles = { "Client", "Provider" };
+                foreach (var role in roles)
+                {
+                    if (!await roleManager.RoleExistsAsync(role))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(role));
+                    }
+                }
+            }
+
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
@@ -55,13 +81,10 @@ namespace ServiceBooking
             }
 
             app.UseHttpsRedirection();
-
-            app.UseAuthorization();
+            app.UseCors("AllowAll");
             app.UseAuthentication();
-
-
+            app.UseAuthorization();
             app.MapControllers();
-
             app.Run();
         }
     }

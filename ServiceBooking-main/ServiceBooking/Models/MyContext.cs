@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ServiceBooking.Models;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace ApiDay1.Models
 {
-    public class MyContext : DbContext
+    public class MyContext :IdentityDbContext<ApplicationUser>
     {
         public MyContext(DbContextOptions<MyContext> options) : base(options) { }
 
