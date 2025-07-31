@@ -19,6 +19,10 @@ namespace ApiDay1.Models
 
         public DbSet<Service> Services { get; set; }
 
+        public DbSet<Admin> Admins { get; set; }
+
+
+
 
     }
 }

@@ -2,5 +2,6 @@
 {
     public class PaymentTransaction
     {
+        public int Id { get; set; }
     }
 }

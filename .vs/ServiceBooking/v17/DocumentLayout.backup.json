@@ -1,12 +1,494 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\web.net teach\\final project\\ServiceBooking\\",
-  "Documents": [],
+  "WorkspaceRootPath": "E:\\Project\\Final Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\dtos\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\dtos\\providerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\providerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\dtos\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\dtos\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\euserstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\euserstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\migrations\\20250726182532_addclientrequestrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250726182532_addclientrequestrelation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\paymenttransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\paymenttransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Client.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Client.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Client.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Client.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:57:11.908Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250726210502_InitialCreate.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T21:05:03.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminDto.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\AdminDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\AdminDto.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\AdminDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\AdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:42:10.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RequestsController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\RequestsController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\RequestsController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\RequestsController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\RequestsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:50:38.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServicesController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ServicesController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ServicesController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ServicesController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ServicesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:50:15.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AdminController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:39:02.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Service.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Service.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Service.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:52:44.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Program.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Program.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Program.cs",
+              "RelativeToolTip": "ServiceBooking\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:12:39.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Request.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Request.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Request.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Request.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Request.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowBcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:53:37.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ClientController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:37:57.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\User.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\User.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\User.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:52:08.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProvidersController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ProvidersController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ProvidersController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ProvidersController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ProvidersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:38:32.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Admin.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Admin.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:39:32.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MyContext.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\MyContext.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\MyContext.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\MyContext.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\MyContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T15:14:41.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProviderDto.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ProviderDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ProviderDto.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ProviderDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ProviderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:32:11.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ClientDto.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ClientDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ClientDto.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ClientDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ClientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:10:42.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RequestDto.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\RequestDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RequestDto.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\RequestDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\RequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:09:57.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ServiceDto.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ServiceDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceDto.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ServiceDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:11:27.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EUserState.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\EUserState.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\EUserState.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\EUserState.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\EUserState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:54:57.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\appsettings.json",
+              "RelativeDocumentMoniker": "ServiceBooking\\appsettings.json",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\appsettings.json",
+              "RelativeToolTip": "ServiceBooking\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-22T15:11:35.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Provider.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Provider.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Provider.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Provider.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Provider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:57:32.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "20250726182532_AddClientRequestRelation.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726182532_AddClientRequestRelation.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250726182532_AddClientRequestRelation.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726182532_AddClientRequestRelation.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250726182532_AddClientRequestRelation.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T18:25:33.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PaymentTransaction.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\PaymentTransaction.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\PaymentTransaction.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\PaymentTransaction.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\PaymentTransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:58:33.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Application.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Application.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Application.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Application.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Application.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:53:54.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ApplicationsController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:51:02.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ComplaintController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ComplaintController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ComplaintController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ComplaintController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ComplaintController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:59:44.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "PaymentTransactionController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:59:06.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:49:06.455Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
