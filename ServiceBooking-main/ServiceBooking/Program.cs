@@ -24,7 +24,7 @@ namespace ServiceBooking
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<MyContext>()
                 .AddDefaultTokenProviders();
-
+            
             // JWT Key
             var key = Encoding.UTF8.GetBytes("SuperStrongKey_Androw2025_123456");
 
@@ -48,6 +48,7 @@ namespace ServiceBooking
                     IssuerSigningKey = new SymmetricSecurityKey(key)
                 };
             });
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             builder.Services.AddCors(options =>
             {
@@ -59,7 +60,7 @@ namespace ServiceBooking
 
             var app = builder.Build();
 
-            // ✅ إضافة الـ Roles هنا
+            //  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQW5kcm93MTkwMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiYzhjNWY0MmYtZjNkMi00ODE2LTg2ZTUtZWM3YmU0YTczZTFiIiwiUm9sZSI6IkNsaWVudCIsIlBob25lTnVtYmVyIjoiMDEwNjk3OTk1OTEiLCJqdGkiOiI3OGRhMDhkMy1iZTVlLTQzMDgtOGY1ZS04NGJjNGE1YjhlMTciLCJleHAiOjE3NTQzMzcxMDQsImlzcyI6InlvdXJkb21haW4uY29tIiwiYXVkIjoieW91cmRvbWFpbi5jb20ifQ.R21Xc1rYO14a_esvFCDkn4o8gv0fQsPBRCRrAaMV9iE
             using (var scope = app.Services.CreateScope())
             {
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();

@@ -12,10 +12,12 @@ using System.Text;
 public class AccountController : ControllerBase
 {
     private readonly UserManager<ApplicationUser> userManager;
+    private readonly IEmailService emailService;
 
-    public AccountController(UserManager<ApplicationUser> userManager)
+    public AccountController(UserManager<ApplicationUser> userManager, IEmailService emailService)
     {
         this.userManager = userManager;
+        this.emailService = emailService;
     }
 
     [HttpPost("register")]
@@ -35,7 +37,10 @@ public class AccountController : ControllerBase
             var result = await userManager.CreateAsync(user, userdto.Password);
             if (result.Succeeded)
             {
-                await userManager.AddToRoleAsync(user, userdto.Role); // اختياري لو عندك RoleManager
+                await userManager.AddToRoleAsync(user, userdto.Role);
+
+                // ممكن تبعت إيميل ترحيبي هنا لو حابب
+
                 return Ok("تم التسجيل بنجاح");
             }
 
@@ -90,5 +95,33 @@ public class AccountController : ControllerBase
         }
 
         return Unauthorized("Invalid username or password");
+    }
+
+    [HttpPost("verify-by-email")]
+    public async Task<IActionResult> VerifyUserByEmail([FromQuery] string email)
+    {
+        var user = await userManager.FindByEmailAsync(email);
+        if (user == null)
+            return NotFound("User not found");
+
+        if (user.EmailConfirmed)
+            return BadRequest("User already verified");
+
+        user.EmailConfirmed = true;
+        await userManager.UpdateAsync(user);
+
+        string subject = "✅ Account Verified";
+        string body = $"<h2>Hello {user.UserName},</h2><p>Your account has been successfully verified.</p>";
+
+        await emailService.SendEmailAsync(user.Email, subject, body);
+
+        return Ok("User verified and email sent.");
+    }
+
+    [HttpGet("test-email")]
+    public async Task<IActionResult> TestEmail()
+    {
+        await emailService.SendEmailAsync("your_real_email@gmail.com", "Test Email", "This is a test email from ASP.NET API.");
+        return Ok("تم إرسال الإيميل (لو مفيش خطأ).");
     }
 }

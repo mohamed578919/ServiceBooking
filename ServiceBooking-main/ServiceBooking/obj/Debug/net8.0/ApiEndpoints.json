@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AccountController",
+    "Method": "TestEmail",
+    "RelativePath": "api/Account/test-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountController",
+    "Method": "VerifyUserByEmail",
+    "RelativePath": "api/Account/verify-by-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ServiceBooking.Controllers.ComplaintController",
     "Method": "CreateComplaint",
     "RelativePath": "api/Complaint",

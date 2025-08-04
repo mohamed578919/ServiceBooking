@@ -21,7 +21,7 @@ namespace ServiceBooking.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        
+    
         public async Task<IActionResult> CreateComplaint([FromBody] CreateComplaintDTO dto)
         {
             if (ModelState.IsValid)
@@ -44,7 +44,7 @@ namespace ServiceBooking.Controllers
         }
 
         [HttpGet]
-
+        
         public async Task<ActionResult<IEnumerable<Complaint>>> GetAllComplaints()
         {
             var complaints = await context.Complaints
