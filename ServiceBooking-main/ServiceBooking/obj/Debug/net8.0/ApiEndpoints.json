@@ -43,16 +43,16 @@
   },
   {
     "ContainingType": "AccountController",
-    "Method": "VerifyUserByEmail",
-    "RelativePath": "api/Account/verify-by-email",
+    "Method": "VerifyCode",
+    "RelativePath": "api/Account/verify",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "dto",
+        "Type": "ServiceBooking.DTOs.VerifyCodeDTO",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
