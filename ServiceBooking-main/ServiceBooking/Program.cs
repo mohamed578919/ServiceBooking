@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using ApiDay1.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
