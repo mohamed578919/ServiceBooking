@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\androw\\Source\\Repos\\ServiceBooking12\\ServiceBooking\\ServiceBooking.csproj": {}
+    "C:\\Users\\androw\\Source\\Repos\\ServiceBooking123456\\ServiceBooking\\ServiceBooking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\androw\\Source\\Repos\\ServiceBooking12\\ServiceBooking\\ServiceBooking.csproj": {
+    "C:\\Users\\androw\\Source\\Repos\\ServiceBooking123456\\ServiceBooking\\ServiceBooking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\androw\\Source\\Repos\\ServiceBooking12\\ServiceBooking\\ServiceBooking.csproj",
+        "projectUniqueName": "C:\\Users\\androw\\Source\\Repos\\ServiceBooking123456\\ServiceBooking\\ServiceBooking.csproj",
         "projectName": "ServiceBooking",
-        "projectPath": "C:\\Users\\androw\\Source\\Repos\\ServiceBooking12\\ServiceBooking\\ServiceBooking.csproj",
+        "projectPath": "C:\\Users\\androw\\Source\\Repos\\ServiceBooking123456\\ServiceBooking\\ServiceBooking.csproj",
         "packagesPath": "C:\\Users\\androw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\androw\\Source\\Repos\\ServiceBooking12\\ServiceBooking\\obj\\",
+        "outputPath": "C:\\Users\\androw\\Source\\Repos\\ServiceBooking123456\\ServiceBooking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\androw\\AppData\\Roaming\\NuGet\\NuGet.Config",
