@@ -10,7 +10,7 @@ namespace ServiceBooking
 {
     public class Program
     {
-        public static async Task Main(string[] args)  // ✅ خلي Main async
+        public static async Task Main(string[] args) 
         {
             var builder = WebApplication.CreateBuilder(args);
 
