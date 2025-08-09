@@ -7,10 +7,6 @@
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -113,6 +109,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|e:\\project\\final project\\servicebooking\\migrations\\20250726210502_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250726210502_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -126,7 +126,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Client.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Client.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\Client.cs",
@@ -135,34 +135,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-22T14:57:11.908Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250726210502_InitialCreate.cs",
-              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
-              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
-              "RelativeToolTip": "ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T21:05:03.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AdminDto.cs",
-              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\AdminDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\AdminDto.cs",
-              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\AdminDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\AdminDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:42:10.014Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -170,7 +143,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 27,
+              "Title": "20250726210502_InitialCreate.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250726210502_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T21:05:03.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminDto.cs",
+              "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\AdminDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\AdminDto.cs",
+              "ToolTip": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\AdminDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\AdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T20:42:10.014Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "RequestsController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\RequestsController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\RequestsController.cs",
@@ -178,12 +175,11 @@
               "RelativeToolTip": "ServiceBooking\\Controllers\\RequestsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:50:38.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:50:38.435Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ServicesController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ServicesController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ServicesController.cs",
@@ -191,12 +187,11 @@
               "RelativeToolTip": "ServiceBooking\\Controllers\\ServicesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:50:15.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:50:15.398Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "AdminController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AdminController.cs",
@@ -204,12 +199,11 @@
               "RelativeToolTip": "ServiceBooking\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:39:02.678Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T15:39:02.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Service.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Service.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\Service.cs",
@@ -217,8 +211,7 @@
               "RelativeToolTip": "ServiceBooking\\Models\\Service.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:52:44.126Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:52:44.126Z"
             },
             {
               "$type": "Document",
@@ -235,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Request.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Request.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\Request.cs",
@@ -243,12 +236,11 @@
               "RelativeToolTip": "ServiceBooking\\Models\\Request.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAowBcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:53:37.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:53:37.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ClientController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ClientController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ClientController.cs",
@@ -256,12 +248,11 @@
               "RelativeToolTip": "ServiceBooking\\Controllers\\ClientController.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAowAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:37:57.954Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T15:37:57.954Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\User.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\User.cs",
@@ -269,12 +260,11 @@
               "RelativeToolTip": "ServiceBooking\\Models\\User.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAgwAkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:52:08.258Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:52:08.258Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ProvidersController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ProvidersController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ProvidersController.cs",
@@ -282,12 +272,11 @@
               "RelativeToolTip": "ServiceBooking\\Controllers\\ProvidersController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:38:32.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T15:38:32.203Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Admin.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Admin.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\Admin.cs",
@@ -295,12 +284,11 @@
               "RelativeToolTip": "ServiceBooking\\Models\\Admin.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:39:32.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T15:39:32.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "MyContext.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\MyContext.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\MyContext.cs",
@@ -308,12 +296,11 @@
               "RelativeToolTip": "ServiceBooking\\Models\\MyContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:14:41.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T15:14:41.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "ProviderDto.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ProviderDto.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ProviderDto.cs",
@@ -321,12 +308,11 @@
               "RelativeToolTip": "ServiceBooking\\DTOs\\ProviderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:32:11.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T20:32:11.987Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "ClientDto.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ClientDto.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ClientDto.cs",
@@ -334,12 +320,11 @@
               "RelativeToolTip": "ServiceBooking\\DTOs\\ClientDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:10:42.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T20:10:42.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "RequestDto.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\RequestDto.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RequestDto.cs",
@@ -347,12 +332,11 @@
               "RelativeToolTip": "ServiceBooking\\DTOs\\RequestDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:09:57.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T20:09:57.658Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "ServiceDto.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\DTOs\\ServiceDto.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceDto.cs",
@@ -360,12 +344,11 @@
               "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:11:27.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-26T20:11:27.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "EUserState.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\EUserState.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\EUserState.cs",
@@ -373,12 +356,11 @@
               "RelativeToolTip": "ServiceBooking\\Models\\EUserState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:54:57.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:54:57.03Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\appsettings.json",
               "RelativeDocumentMoniker": "ServiceBooking\\appsettings.json",
@@ -386,12 +368,11 @@
               "RelativeToolTip": "ServiceBooking\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-22T15:11:35.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T15:11:35.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "Provider.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Provider.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\Provider.cs",
@@ -399,12 +380,11 @@
               "RelativeToolTip": "ServiceBooking\\Models\\Provider.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:57:32.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T14:57:32.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "20250726182532_AddClientRequestRelation.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Migrations\\20250726182532_AddClientRequestRelation.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250726182532_AddClientRequestRelation.cs",
@@ -416,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "PaymentTransaction.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\PaymentTransaction.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\PaymentTransaction.cs",
@@ -428,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "Application.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Models\\Application.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Models\\Application.cs",
@@ -440,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "ApplicationsController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ApplicationsController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ApplicationsController.cs",
@@ -452,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "ComplaintController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\ComplaintController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ComplaintController.cs",
@@ -464,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "PaymentTransactionController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
@@ -476,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\Project\\Final Project\\ServiceBooking\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AuthController.cs",
