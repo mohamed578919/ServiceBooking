@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AccountController",
+    "Method": "TestEmail",
+    "RelativePath": "api/Account/test-email",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AccountController",
+    "Method": "VerifyCode",
+    "RelativePath": "api/Account/verify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ServiceBooking.DTOs.VerifyCodeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ServiceBooking.Controllers.ComplaintController",
     "Method": "CreateComplaint",
     "RelativePath": "api/Complaint",

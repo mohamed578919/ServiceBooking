@@ -1,5 +1,53 @@
 [
   {
+    "ContainingType": "ServiceBooking.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDTO",
+        "Type": "ServiceBooking.DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/Account/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userdto",
+        "Type": "ServiceBooking.DTOs.RegisterUserDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.AccountController",
+    "Method": "VerifyCode",
+    "RelativePath": "api/Account/verify",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ServiceBooking.DTOs.VerifyCodeDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AdminController",
     "Method": "GetAdmins",
     "RelativePath": "api/Admin",
@@ -103,6 +151,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ApplicationsController",
+    "Method": "ApplyToRequest",
+    "RelativePath": "api/Applications/apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ServiceBooking.DTOs.ApplicationDTO",
         "IsRequired": true
       }
     ],
@@ -216,6 +280,58 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
+    "Method": "CreateComplaint",
+    "RelativePath": "api/Complaint",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "complaint",
+        "Type": "ServiceBooking.Models.Complaint",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceBooking.Models.Complaint",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
+    "Method": "GetComplaint",
+    "RelativePath": "api/Complaint/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "ServiceBooking.Models.Complaint",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ProviderController",

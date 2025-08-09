@@ -146,3 +146,5 @@ E:\Project\Final Project\ServiceBooking\obj\Debug\net8.0\refint\ServiceBooking.d
 E:\Project\Final Project\ServiceBooking\obj\Debug\net8.0\ServiceBooking.pdb
 E:\Project\Final Project\ServiceBooking\obj\Debug\net8.0\ServiceBooking.genruntimeconfig.cache
 E:\Project\Final Project\ServiceBooking\obj\Debug\net8.0\ref\ServiceBooking.dll
+E:\Project\Final Project\ServiceBooking\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Project\Final Project\ServiceBooking\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

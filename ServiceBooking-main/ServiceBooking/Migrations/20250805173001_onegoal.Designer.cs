@@ -4,6 +4,7 @@ using ApiDay1.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ServiceBooking.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20250805173001_onegoal")]
+    partial class onegoal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -155,36 +158,19 @@ namespace ServiceBooking.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ServiceBooking.Models.Admin", b =>
+            modelBuilder.Entity("ProviderService", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("ProvidersId")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    b.Property<int>("ServicesId")
+                        .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("ProvidersId", "ServicesId");
 
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasIndex("ServicesId");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProfileImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Admins");
+                    b.ToTable("ProviderService");
                 });
 
             modelBuilder.Entity("ServiceBooking.Models.Application", b =>
@@ -195,25 +181,7 @@ namespace ServiceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("AppliedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Message")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProviderId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("RequestId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ProviderId");
-
-                    b.HasIndex("RequestId");
 
                     b.ToTable("Applications");
                 });
@@ -304,21 +272,6 @@ namespace ServiceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProfileImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Clients");
@@ -332,11 +285,33 @@ namespace ServiceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Text")
+                    b.Property<int>("ClientId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProviderId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("RequestId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
+
+                    b.HasIndex("ProviderId");
+
+                    b.HasIndex("RequestId");
 
                     b.ToTable("Complaints");
                 });
@@ -362,30 +337,6 @@ namespace ServiceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Bio")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FullName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProfileImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<double>("Rating")
-                        .HasColumnType("float");
-
-                    b.Property<string>("Specialization")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Providers");
@@ -399,26 +350,7 @@ namespace ServiceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ClientId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("RequestDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("ServiceId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ClientId");
-
-                    b.HasIndex("ServiceId");
 
                     b.ToTable("Requests");
                 });
@@ -431,16 +363,14 @@ namespace ServiceBooking.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProviderId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("ProviderId");
 
                     b.ToTable("Services");
                 });
@@ -496,59 +426,42 @@ namespace ServiceBooking.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ServiceBooking.Models.Application", b =>
+            modelBuilder.Entity("ProviderService", b =>
                 {
-                    b.HasOne("ServiceBooking.Models.ApplicationUser", "Provider")
+                    b.HasOne("ServiceBooking.Models.Provider", null)
                         .WithMany()
-                        .HasForeignKey("ProviderId")
+                        .HasForeignKey("ProvidersId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ServiceBooking.Models.Request", "Request")
+                    b.HasOne("ServiceBooking.Models.Service", null)
                         .WithMany()
-                        .HasForeignKey("RequestId")
+                        .HasForeignKey("ServicesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Provider");
-
-                    b.Navigation("Request");
                 });
 
-            modelBuilder.Entity("ServiceBooking.Models.Request", b =>
+            modelBuilder.Entity("ServiceBooking.Models.Complaint", b =>
                 {
                     b.HasOne("ServiceBooking.Models.Client", "Client")
-                        .WithMany("Requests")
+                        .WithMany()
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ServiceBooking.Models.Service", "Service")
+                    b.HasOne("ServiceBooking.Models.Provider", "Provider")
                         .WithMany()
-                        .HasForeignKey("ServiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProviderId");
+
+                    b.HasOne("ServiceBooking.Models.Request", "Request")
+                        .WithMany()
+                        .HasForeignKey("RequestId");
 
                     b.Navigation("Client");
 
-                    b.Navigation("Service");
-                });
+                    b.Navigation("Provider");
 
-            modelBuilder.Entity("ServiceBooking.Models.Service", b =>
-                {
-                    b.HasOne("ServiceBooking.Models.Provider", null)
-                        .WithMany("Services")
-                        .HasForeignKey("ProviderId");
-                });
-
-            modelBuilder.Entity("ServiceBooking.Models.Client", b =>
-                {
-                    b.Navigation("Requests");
-                });
-
-            modelBuilder.Entity("ServiceBooking.Models.Provider", b =>
-                {
-                    b.Navigation("Services");
+                    b.Navigation("Request");
                 });
 #pragma warning restore 612, 618
         }

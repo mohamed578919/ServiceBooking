@@ -1,4 +1,4 @@
-﻿using System.Text;
+using System.Text;
 using ApiDay1.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +24,7 @@ namespace ServiceBooking
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<MyContext>()
                 .AddDefaultTokenProviders();
-
+            
             // JWT Key
             var key = Encoding.UTF8.GetBytes("SuperStrongKey_Androw2025_123456");
 
@@ -48,6 +48,7 @@ namespace ServiceBooking
                     IssuerSigningKey = new SymmetricSecurityKey(key)
                 };
             });
+            builder.Services.AddScoped<IEmailService, EmailService>();
 
             builder.Services.AddCors(options =>
             {
@@ -59,7 +60,7 @@ namespace ServiceBooking
 
             var app = builder.Build();
 
-            // ✅ إضافة الـ Roles هنا
+           
             using (var scope = app.Services.CreateScope())
             {
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
