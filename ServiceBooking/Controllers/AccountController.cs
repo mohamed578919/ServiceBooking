@@ -120,10 +120,13 @@ namespace ServiceBooking.Controllers
             if (user == null)
                 return NotFound("User not found");
 
+            if (user.IsVerified)
+                return BadRequest("Account already verified.");
+
             if (user.VerificationCode == dto.Code)
             {
                 user.IsVerified = true;
-                user.VerificationCode = null;
+                user.VerificationCode = null; // حذف الكود بعد التفعيل
                 await userManager.UpdateAsync(user);
                 return Ok("Account verified successfully.");
             }
@@ -132,7 +135,7 @@ namespace ServiceBooking.Controllers
         }
 
 
-       
 
-        }
+
+    }
 }
