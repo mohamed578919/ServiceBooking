@@ -24,21 +24,37 @@ namespace ServiceBooking.Controllers
         }
 
         [HttpPost("Register")]
-        public async Task<IActionResult> Register(RegisterUserDTO userdto)
+        public async Task<IActionResult> Register([FromForm] RegisterUserDTO userdto)
         {
             if (ModelState.IsValid)
             {
                 var verificationCode = new Random().Next(100000, 999999).ToString();
 
+                string? imagePath = null;
+                if (userdto.NationalIdImage != null)
+                {
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(userdto.NationalIdImage.FileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/nationalIds", fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await userdto.NationalIdImage.CopyToAsync(stream);
+                    }
+
+                    imagePath = $"/nationalIds/{fileName}"; // URL للفرونت
+                }
+
                 var user = new ApplicationUser
                 {
                     UserName = userdto.UserName,
+                    FullName = userdto.FullName,
                     Email = userdto.Email,
                     PhoneNumber = userdto.PhoneNumber,
                     Role = userdto.Role,
                     Craft = userdto.Role == "Provider" ? userdto.Craft : null,
                     VerificationCode = verificationCode,
-                    IsVerified = false
+                    IsVerified = false,
+                    NationalIdImage = imagePath
                 };
 
                 var result = await userManager.CreateAsync(user, userdto.Password);
@@ -105,10 +121,12 @@ namespace ServiceBooking.Controllers
                 token = tokenString,
                 user = new
                 {
+                    user.FullName,
                     user.UserName,
                     user.Role,
                     user.PhoneNumber,
-                    user.Craft
+                    user.Craft,
+                     user.NationalIdImage
                 }
             });
         }
@@ -133,6 +151,29 @@ namespace ServiceBooking.Controllers
 
             return BadRequest("Invalid code.");
         }
+        [HttpGet("profile")]
+        public async Task<IActionResult> GetProfile()
+        {
+            var userName = User.Identity?.Name;
+            if (string.IsNullOrEmpty(userName))
+                return Unauthorized("User not logged in");
+
+            var user = await userManager.FindByNameAsync(userName);
+            if (user == null)
+                return NotFound("User not found");
+
+            return Ok(new
+            {
+                user.FullName,
+                user.UserName,
+                user.Email,
+                user.PhoneNumber,
+                user.Role,
+                user.Craft,
+                user.NationalIdImage
+            });
+        }
+
 
 
 

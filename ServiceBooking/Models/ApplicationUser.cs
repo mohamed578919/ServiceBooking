@@ -9,5 +9,8 @@ namespace ServiceBooking.Models
         public string? VerificationCode { get; set; }
         public bool IsVerified { get; set; } = false;
 
+        public string FullName { get; set; }
+        public string? NationalIdImage { get; set; }
+
     }
 }

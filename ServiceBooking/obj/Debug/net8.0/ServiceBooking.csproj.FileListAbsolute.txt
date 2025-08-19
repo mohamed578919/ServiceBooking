@@ -295,3 +295,4 @@ C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\re
 C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\ServiceBooking.pdb
 C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\ServiceBooking.genruntimeconfig.cache
 C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\ref\ServiceBooking.dll
+C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\bin\Debug\net8.0\ServiceBooking.staticwebassets.runtime.json

@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "STEV42fjj5oWPSLyBhhRX7iSDkC5UWDuxlMVtSMNIWg=",
+  "Hash": "qwdWw3E2Z+T6ed2FBoVXZjb4J49BAM2DGm5/j5QLybI=",
   "Source": "ServiceBooking",
   "BasePath": "_content/ServiceBooking",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ServiceBooking\\wwwroot",
+      "Source": "ServiceBooking",
+      "ContentRoot": "C:\\Users\\androw\\Source\\Repos\\ServiceBookingfi\\ServiceBooking\\wwwroot\\",
+      "BasePath": "_content/ServiceBooking",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }
