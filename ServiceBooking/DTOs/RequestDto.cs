@@ -3,10 +3,12 @@
     public class RequestDto
     {
         public int Id { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
 
         public string? Notes { get; set; }
 
-        public int ClientId { get; set; }
+        public string ClientId { get; set; }
         public string ClientName { get; set; } = string.Empty;
 
         public int ServiceId { get; set; }

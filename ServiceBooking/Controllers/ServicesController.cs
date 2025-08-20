@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using ApiDay1.Models;
 using ServiceBooking.DTOs;
 using ServiceBooking.Models;
+using Microsoft.AspNetCore.Authorization;
+using ServiceBooking.Logics;
+using System.Security.Claims;
 
 namespace ServiceBooking.Controllers
 {
@@ -10,91 +13,49 @@ namespace ServiceBooking.Controllers
     [Route("api/[controller]")]
     public class ServiceController : ControllerBase
     {
-        private readonly MyContext _context;
+        private readonly IServiceService _service;
 
-        public ServiceController(MyContext context)
+        public ServiceController(IServiceService service) => _service = service;
+
+        private string UserId => User.FindFirstValue(ClaimTypes.NameIdentifier)!;
+
+        [HttpPost]
+        [Authorize(Roles = "Provider")]
+        public async Task<ActionResult<ServiceDto>> Create(ServiceCreateDto dto)
         {
-            _context = context;
+            var result = await _service.CreateAsync(UserId, dto);
+            return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
         }
 
-        // GET: api/Service
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ServiceDto>>> GetAll()
-        {
-            var services = await _context.Services
-                .Select(s => new ServiceDto
-                {
-                    Id = s.Id,
-                    Name = s.Name
-                }).ToListAsync();
-
-            return Ok(services);
-        }
-
-        // GET: api/Service/5
-        [HttpGet("{id}")]
+        [HttpGet("{id:int}")]
+        [AllowAnonymous]
         public async Task<ActionResult<ServiceDto>> GetById(int id)
         {
-            var service = await _context.Services
-                .Where(s => s.Id == id)
-                .Select(s => new ServiceDto
-                {
-                    Id = s.Id,
-                    Name = s.Name
-                }).FirstOrDefaultAsync();
-
-            if (service == null)
-                return NotFound();
-
-            return Ok(service);
+            var s = await _service.GetByIdAsync(id);
+            return s is null ? NotFound() : Ok(s);
         }
 
-        // POST: api/Service
-        [HttpPost]
-        public async Task<ActionResult<ServiceDto>> Create(ServiceDto dto)
+        [HttpGet("mine")]
+        [Authorize(Roles = "Provider")]
+        public async Task<ActionResult<IEnumerable<ServiceDto>>> GetMine()
         {
-            var service = new Service
-            {
-                Name = dto.Name
-            };
-
-            _context.Services.Add(service);
-            await _context.SaveChangesAsync();
-
-            dto.Id = service.Id;
-
-            return CreatedAtAction(nameof(GetById), new { id = dto.Id }, dto);
+            var list = await _service.GetByProviderAsync(UserId);
+            return Ok(list);
         }
 
-        // PUT: api/Service/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, ServiceDto dto)
+        [HttpPut("{id:int}")]
+        [Authorize(Roles = "Provider")]
+        public async Task<ActionResult<ServiceDto>> Update(int id, ServiceUpdateDto dto)
         {
-            if (id != dto.Id)
-                return BadRequest();
-
-            var service = await _context.Services.FindAsync(id);
-            if (service == null)
-                return NotFound();
-
-            service.Name = dto.Name;
-
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            var s = await _service.UpdateAsync(id, UserId, dto);
+            return Ok(s);
         }
 
-        // DELETE: api/Service/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id:int}")]
+        [Authorize(Roles = "Provider")]
         public async Task<IActionResult> Delete(int id)
         {
-            var service = await _context.Services.FindAsync(id);
-            if (service == null)
-                return NotFound();
-
-            _context.Services.Remove(service);
-            await _context.SaveChangesAsync();
-
+            await _service.DeleteAsync(id, UserId);
             return NoContent();
         }
     }

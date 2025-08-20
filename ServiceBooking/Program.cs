@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Identity;
 using ServiceBooking.Models;
+using ServiceBooking.Logics;
 
 namespace ServiceBooking
 {
@@ -13,6 +14,9 @@ namespace ServiceBooking
         public static async Task Main(string[] args) 
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddScoped<IServiceService, ServiceService>();
+            builder.Services.AddScoped<IComplaintService, ComplaintService>();
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();

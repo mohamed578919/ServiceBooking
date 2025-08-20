@@ -22,29 +22,33 @@ namespace ServiceBooking.Controllers
             _userManager = userManager;
         }
 
+        // ✅ Provider يقدم على Request
         [HttpPost("apply")]
         public async Task<IActionResult> ApplyToRequest(ApplicationDTO dto)
         {
-            // Get current logged-in provider
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var provider = await _userManager.FindByIdAsync(userId);
-            if (provider == null || provider.Role != "Provider")
-                return BadRequest("Unauthorized or invalid user");
+            if (provider == null)
+                return Unauthorized("Invalid provider");
 
-            // Check if request exists
+            // لازم يكون Provider
+            var roles = await _userManager.GetRolesAsync(provider);
+            if (!roles.Contains("Provider"))
+                return Forbid();
+
+            // تأكد أن الطلب موجود
             var request = await _context.Requests.FindAsync(dto.RequestId);
             if (request == null)
                 return NotFound("Request not found");
 
-            // Check if already applied
+            // تأكد أنه مفيش Duplicate
             var alreadyApplied = await _context.Applications
                 .AnyAsync(a => a.RequestId == dto.RequestId && a.ProviderId == provider.Id);
 
             if (alreadyApplied)
                 return BadRequest("You have already applied to this request");
 
-            // Create new application
             var application = new Application
             {
                 RequestId = dto.RequestId,
@@ -57,6 +61,48 @@ namespace ServiceBooking.Controllers
             await _context.SaveChangesAsync();
 
             return Ok("Application submitted successfully");
+        }
+
+        // ✅ جلب كل الـ Applications الخاصة بـ Request معين (العميل يشوف المتقدمين)
+        [HttpGet("request/{requestId}")]
+        public async Task<IActionResult> GetApplicationsForRequest(int requestId)
+        {
+            var applications = await _context.Applications
+                .Where(a => a.RequestId == requestId)
+                .Include(a => a.Provider)
+                .Select(a => new
+                {
+                    a.Id,
+                    a.Message,
+                    a.AppliedAt,
+                    ProviderName = a.Provider.UserName,
+                    ProviderId = a.ProviderId
+                })
+                .ToListAsync();
+
+            return Ok(applications);
+        }
+
+        // ✅ Provider يشوف كل الطلبات اللي قدم عليها
+        [HttpGet("my-applications")]
+        public async Task<IActionResult> GetMyApplications()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var apps = await _context.Applications
+                .Where(a => a.ProviderId == userId)
+                .Include(a => a.Request)
+                .Select(a => new
+                {
+                    a.Id,
+                    a.Message,
+                    a.AppliedAt,
+                    RequestTitle = a.Request.Notes,
+                    RequestId = a.RequestId
+                })
+                .ToListAsync();
+
+            return Ok(apps);
         }
     }
 }

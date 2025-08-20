@@ -3,12 +3,14 @@
     public class Request
     {
         public int Id { get; set; }
+        public string? Title { get; set; }
+        public string? Description { get; set; }
 
         // Foreign Key للكيلنت
-        public int ClientId { get; set; }
+        public string ClientId { get; set; }
 
         // Navigation Property للعميل
-        public Client Client { get; set; }
+        public ApplicationUser Client { get; set; }
 
         // Foreign Key للخدمة المطلوبة
         public int ServiceId { get; set; }
@@ -22,5 +24,8 @@
         public string? Status { get; set; }  // مثلاً: Pending, Approved, Rejected
 
         public string? Notes { get; set; }
+
+       
+        public ICollection<Application>? Applications { get; set; }
     }
 }

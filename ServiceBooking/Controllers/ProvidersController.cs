@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using ServiceBooking.DTOs;
 using ServiceBooking.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace ServiceBooking.Controllers
 {
@@ -12,73 +13,78 @@ namespace ServiceBooking.Controllers
     public class ProviderController : ControllerBase
     {
         private readonly MyContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public ProviderController(MyContext context)
+        public ProviderController(MyContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
-        // GET: api/Provider
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProviderDto>>> GetProviders()
+        // ✅ Provider يشوف كل الـ Requests المتاحة
+        [HttpGet("{providerId}/available-requests")]
+        public async Task<IActionResult> GetAvailableRequests(string providerId)
         {
-            return await _context.Providers
-                .Select(p => new ProviderDto { Id = p.Id, Name = p.FullName })
+            var provider = await _userManager.FindByIdAsync(providerId);
+            if (provider == null)
+                return NotFound("Provider not found");
+
+            // هات كل الـ Requests اللي لسه مفيهاش Applications من الـ Provider ده
+            var requests = await _context.Requests
+                .Include(r => r.Client) // علشان يرجع بيانات العميل
+                .Include(r => r.Service) // علشان يرجع بيانات الخدمة
+                .Where(r => !_context.Applications
+                    .Any(a => a.RequestId == r.Id && a.ProviderId == providerId))
                 .ToListAsync();
+
+            return Ok(requests);
         }
 
-        // GET: api/Provider/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ProviderDto>> GetProvider(int id)
+        // ✅ Provider يقدم Application على Request
+        [HttpPost("{providerId}/apply/{requestId}")]
+        public async Task<IActionResult> ApplyForRequest(string providerId, int requestId)
         {
-            var provider = await _context.Providers.FindAsync(id);
-            if (provider == null)
-                return NotFound();
+            var provider = await _userManager.FindByIdAsync(providerId);
+            var request = await _context.Requests.FindAsync(requestId);
 
-            return new ProviderDto { Id = provider.Id, Name = provider.FullName };
-        }
+            if (provider == null || request == null)
+                return NotFound("Provider or Request not found");
 
-        // POST: api/Provider
-        [HttpPost]
-        public async Task<ActionResult<ProviderDto>> PostProvider(ProviderDto dto)
-        {
-            var provider = new Provider { FullName = dto.Name };
-            _context.Providers.Add(provider);
+            // تأكد إنه مش مقدم قبل كده
+            var exists = await _context.Applications
+                .AnyAsync(a => a.ProviderId == providerId && a.RequestId == requestId);
+            if (exists)
+                return BadRequest("Already applied for this request");
+
+            var application = new Application
+            {
+                ProviderId = providerId,
+                RequestId = requestId,
+                Status = "Pending",
+                AppliedAt = DateTime.UtcNow
+            };
+
+            _context.Applications.Add(application);
             await _context.SaveChangesAsync();
 
-            dto.Id = provider.Id;
-            return CreatedAtAction(nameof(GetProvider), new { id = provider.Id }, dto);
+            return Ok(application);
         }
 
-        // PUT: api/Provider/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutProvider(int id, ProviderDto dto)
+        // ✅ Provider يشوف كل الـ Applications اللي قدمها
+        [HttpGet("{providerId}/applications")]
+        public async Task<ActionResult<IEnumerable<Application>>> GetProviderApplications(string providerId)
         {
-            if (id != dto.Id)
-                return BadRequest();
-
-            var provider = await _context.Providers.FindAsync(id);
+            var provider = await _userManager.FindByIdAsync(providerId);
             if (provider == null)
-                return NotFound();
+                return NotFound("Provider not found");
 
-            provider.FullName = dto.Name;
-            await _context.SaveChangesAsync();
+            var apps = await _context.Applications
+                .Include(a => a.Request)
+                .ThenInclude(r => r.Client)
+                .Where(a => a.ProviderId == providerId)
+                .ToListAsync();
 
-            return NoContent();
-        }
-
-        // DELETE: api/Provider/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProvider(int id)
-        {
-            var provider = await _context.Providers.FindAsync(id);
-            if (provider == null)
-                return NotFound();
-
-            _context.Providers.Remove(provider);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            return Ok(apps);
         }
     }
 

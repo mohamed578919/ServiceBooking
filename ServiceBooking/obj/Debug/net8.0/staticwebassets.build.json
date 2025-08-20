@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "STEV42fjj5oWPSLyBhhRX7iSDkC5UWDuxlMVtSMNIWg=",
+  "Hash": "OjviTvHRO/+yA59zatlmJtdhVh/AUm72VDxTW+hVZzE=",
   "Source": "ServiceBooking",
   "BasePath": "_content/ServiceBooking",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

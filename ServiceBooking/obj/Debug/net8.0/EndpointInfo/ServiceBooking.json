@@ -314,6 +314,41 @@
         }
       }
     },
+    "/api/Applications/request/{requestId}": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "parameters": [
+          {
+            "name": "requestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Applications/my-applications": {
+      "get": {
+        "tags": [
+          "Applications"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Client": {
       "get": {
         "tags": [
@@ -508,17 +543,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/Complaint"
+                "$ref": "#/components/schemas/ComplaintCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/Complaint"
+                "$ref": "#/components/schemas/ComplaintCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/Complaint"
+                "$ref": "#/components/schemas/ComplaintCreateDto"
               }
             }
           }
@@ -529,17 +564,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Complaint"
+                  "$ref": "#/components/schemas/ComplaintDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Complaint"
+                  "$ref": "#/components/schemas/ComplaintDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Complaint"
+                  "$ref": "#/components/schemas/ComplaintDto"
                 }
               }
             }
@@ -569,17 +604,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/Complaint"
+                  "$ref": "#/components/schemas/ComplaintDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Complaint"
+                  "$ref": "#/components/schemas/ComplaintDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Complaint"
+                  "$ref": "#/components/schemas/ComplaintDto"
                 }
               }
             }
@@ -587,10 +622,10 @@
         }
       }
     },
-    "/api/Provider": {
+    "/api/Complaint/mine": {
       "get": {
         "tags": [
-          "Provider"
+          "Complaint"
         ],
         "responses": {
           "200": {
@@ -600,7 +635,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ProviderDto"
+                    "$ref": "#/components/schemas/ComplaintDto"
                   }
                 }
               },
@@ -608,7 +643,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ProviderDto"
+                    "$ref": "#/components/schemas/ComplaintDto"
                   }
                 }
               },
@@ -616,74 +651,177 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/ProviderDto"
+                    "$ref": "#/components/schemas/ComplaintDto"
                   }
                 }
               }
             }
           }
         }
-      },
+      }
+    },
+    "/api/Complaint/against-me": {
+      "get": {
+        "tags": [
+          "Complaint"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ComplaintDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ComplaintDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ComplaintDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Complaint/{id}/status": {
+      "patch": {
+        "tags": [
+          "Complaint"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplaintUpdateStatusDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplaintUpdateStatusDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ComplaintUpdateStatusDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplaintDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplaintDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ComplaintDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Provider/{providerId}/available-requests": {
+      "get": {
+        "tags": [
+          "Provider"
+        ],
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Provider/{providerId}/apply/{requestId}": {
       "post": {
         "tags": [
           "Provider"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProviderDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProviderDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProviderDto"
-              }
+        "parameters": [
+          {
+            "name": "providerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProviderDto"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProviderDto"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProviderDto"
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/api/Provider/{id}": {
+    "/api/Provider/{providerId}/applications": {
       "get": {
         "tags": [
           "Provider"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "providerId",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "integer",
-              "format": "int32"
+              "type": "string"
             }
           }
         ],
@@ -693,81 +831,29 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProviderDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Application"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProviderDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Application"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProviderDto"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Application"
+                  }
                 }
               }
             }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Provider"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProviderDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProviderDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProviderDto"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Provider"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       }
@@ -941,42 +1027,6 @@
       }
     },
     "/api/Service": {
-      "get": {
-        "tags": [
-          "Service"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ServiceDto"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ServiceDto"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/ServiceDto"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "Service"
@@ -985,17 +1035,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceDto"
+                "$ref": "#/components/schemas/ServiceCreateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceDto"
+                "$ref": "#/components/schemas/ServiceCreateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceDto"
+                "$ref": "#/components/schemas/ServiceCreateDto"
               }
             }
           }
@@ -1082,24 +1132,41 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceDto"
+                "$ref": "#/components/schemas/ServiceUpdateDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceDto"
+                "$ref": "#/components/schemas/ServiceUpdateDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceDto"
+                "$ref": "#/components/schemas/ServiceUpdateDto"
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceDto"
+                }
+              }
+            }
           }
         }
       },
@@ -1121,6 +1188,44 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Service/mine": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ServiceDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1185,6 +1290,46 @@
         },
         "additionalProperties": false
       },
+      "Application": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "requestId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "request": {
+            "$ref": "#/components/schemas/Request"
+          },
+          "providerId": {
+            "type": "string",
+            "nullable": true
+          },
+          "provider": {
+            "$ref": "#/components/schemas/Provider"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "appliedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "ApplicationDTO": {
         "type": "object",
         "properties": {
@@ -1194,6 +1339,144 @@
           },
           "message": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApplicationUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
+          },
+          "craft": {
+            "type": "string",
+            "nullable": true
+          },
+          "verificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isVerified": {
+            "type": "boolean"
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Service"
+            },
+            "nullable": true
+          },
+          "complaintsFiled": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Complaint"
+            },
+            "nullable": true
+          },
+          "complaintsAgainst": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Complaint"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Client": {
+        "required": [
+          "email",
+          "fullName",
+          "phoneNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "email": {
+            "minLength": 1,
+            "type": "string",
+            "format": "email"
+          },
+          "phoneNumber": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "profileImageUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "requests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Request"
+            },
             "nullable": true
           }
         },
@@ -1223,7 +1506,10 @@
       },
       "Complaint": {
         "required": [
-          "text"
+          "againstUserId",
+          "description",
+          "filedByUserId",
+          "title"
         ],
         "type": "object",
         "properties": {
@@ -1231,9 +1517,194 @@
             "type": "integer",
             "format": "int32"
           },
-          "text": {
+          "title": {
+            "maxLength": 180,
             "minLength": 1,
             "type": "string"
+          },
+          "description": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "attachmentPath": {
+            "maxLength": 500,
+            "type": "string",
+            "nullable": true
+          },
+          "severity": {
+            "$ref": "#/components/schemas/ComplaintSeverity"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ComplaintStatus"
+          },
+          "createdAtUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAtUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "adminNotes": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
+          },
+          "filedByUserId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "filedByUser": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "againstUserId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "againstUser": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          },
+          "relatedRequestId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "relatedServiceId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplaintCreateDto": {
+        "required": [
+          "againstUserId",
+          "description",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "maxLength": 180,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 4000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "severity": {
+            "$ref": "#/components/schemas/ComplaintSeverity"
+          },
+          "againstUserId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "relatedRequestId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "relatedServiceId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplaintDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "severity": {
+            "$ref": "#/components/schemas/ComplaintSeverity"
+          },
+          "status": {
+            "$ref": "#/components/schemas/ComplaintStatus"
+          },
+          "createdAtUtc": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAtUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "filedByUserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "againstUserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "relatedRequestId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "relatedServiceId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "adminNotes": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ComplaintSeverity": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ComplaintStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "ComplaintUpdateStatusDto": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/ComplaintStatus"
+          },
+          "adminNotes": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1252,15 +1723,115 @@
         },
         "additionalProperties": false
       },
-      "ProviderDto": {
+      "Provider": {
         "type": "object",
         "properties": {
           "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedUserName": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "normalizedEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailConfirmed": {
+            "type": "boolean"
+          },
+          "passwordHash": {
+            "type": "string",
+            "nullable": true
+          },
+          "securityStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "concurrencyStamp": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumberConfirmed": {
+            "type": "boolean"
+          },
+          "twoFactorEnabled": {
+            "type": "boolean"
+          },
+          "lockoutEnd": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "lockoutEnabled": {
+            "type": "boolean"
+          },
+          "accessFailedCount": {
             "type": "integer",
             "format": "int32"
           },
-          "name": {
+          "role": {
             "type": "string",
+            "nullable": true
+          },
+          "craft": {
+            "type": "string",
+            "nullable": true
+          },
+          "verificationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "isVerified": {
+            "type": "boolean"
+          },
+          "complaintsFiled": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Complaint"
+            },
+            "nullable": true
+          },
+          "complaintsAgainst": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Complaint"
+            },
+            "nullable": true
+          },
+          "skill": {
+            "type": "string",
+            "nullable": true
+          },
+          "bio": {
+            "type": "string",
+            "nullable": true
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Service"
+            },
+            "nullable": true
+          },
+          "applications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Application"
+            },
             "nullable": true
           }
         },
@@ -1291,6 +1862,49 @@
           },
           "craft": {
             "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Request": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "clientId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "client": {
+            "$ref": "#/components/schemas/Client"
+          },
+          "serviceId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "service": {
+            "$ref": "#/components/schemas/Service"
+          },
+          "requestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "applications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Application"
+            },
             "nullable": true
           }
         },
@@ -1330,12 +1944,93 @@
         },
         "additionalProperties": false
       },
+      "Service": {
+        "required": [
+          "name",
+          "providerId"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
+          },
+          "hourlyRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "providerId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "provider": {
+            "$ref": "#/components/schemas/ApplicationUser"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServiceCreateDto": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
+          },
+          "hourlyRate": {
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "experienceYears": {
+            "maximum": 80,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "ServiceDto": {
         "type": "object",
         "properties": {
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "providerId": {
+            "type": "string",
+            "nullable": true
           },
           "name": {
             "type": "string",
@@ -1344,6 +2039,55 @@
           "description": {
             "type": "string",
             "nullable": true
+          },
+          "hourlyRate": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "experienceYears": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ServiceUpdateDto": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 120,
+            "minLength": 1,
+            "type": "string"
+          },
+          "description": {
+            "maxLength": 2000,
+            "type": "string",
+            "nullable": true
+          },
+          "hourlyRate": {
+            "maximum": 1000000,
+            "minimum": 0,
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "experienceYears": {
+            "maximum": 80,
+            "minimum": 0,
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isActive": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false

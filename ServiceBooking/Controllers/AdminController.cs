@@ -1,7 +1,9 @@
 ﻿using ApiDay1.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceBooking.DTOs;
+using ServiceBooking.Enums;
 using ServiceBooking.Models;
 
 [Route("api/[controller]")]
@@ -9,93 +11,118 @@ using ServiceBooking.Models;
 public class AdminController : ControllerBase
 {
     private readonly MyContext _context;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public AdminController(MyContext context)
+    public AdminController(MyContext context, UserManager<ApplicationUser> userManager)
     {
         _context = context;
+        _userManager = userManager;
     }
+    // get all statistics 
 
-    // GET: api/Admin
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<AdminDto>>> GetAdmins()
+    // 📊 إحصائيات عامة
+    [HttpGet("statistics")]
+    public async Task<IActionResult> GetStatistics()
     {
-        return await _context.Admins
-            .Select(a => new AdminDto
-            {
-                Id = a.Id,
-                Username = a.Username,
-                Email = a.Email
-            }).ToListAsync();
-    }
+        var clients = (await _userManager.GetUsersInRoleAsync("Client")).Count;
+        var providers = (await _userManager.GetUsersInRoleAsync("Provider")).Count;
+        var requests = await _context.Requests.CountAsync();
+        var applications = await _context.Applications.CountAsync();
+        var complaints = await _context.Complaints.CountAsync();
 
-    // GET: api/Admin/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<AdminDto>> GetAdmin(int id)
-    {
-        var admin = await _context.Admins.FindAsync(id);
-
-        if (admin == null)
-            return NotFound();
-
-        var dto = new AdminDto
+        return Ok(new
         {
-            Id = admin.Id,
-            Username = admin.Username,
-            Email = admin.Email
-        };
-
-        return dto;
+            Clients = clients,
+            Providers = providers,
+            Requests = requests,
+            Applications = applications,
+            Complaints = complaints
+        });
     }
 
-    // POST: api/Admin
-    [HttpPost]
-    public async Task<ActionResult<AdminDto>> PostAdmin(AdminDto dto)
+    // ✅ مراجعة البروفايدرز
+    [HttpGet("providers/pending")]
+    public async Task<IActionResult> GetPendingProviders()
     {
-        var admin = new Admin
-        {
-            Username = dto.Username,
-            Email = dto.Email
-        };
+        var pendingProviders = await _context.Users
+            .Where(u => u.Role == "Provider" && u.Status == "Pending")
+            .ToListAsync();
 
-        _context.Admins.Add(admin);
+        return Ok(pendingProviders);
+    }
+
+    [HttpPost("providers/{providerId}/approve")]
+    public async Task<IActionResult> ApproveProvider(string providerId)
+    {
+        var provider = await _context.Users.FindAsync(providerId);
+        if (provider == null) return NotFound("Provider not found");
+
+        provider.Status = "Approved";
+        _context.Users.Update(provider);
         await _context.SaveChangesAsync();
 
-        dto.Id = admin.Id;
-
-        return CreatedAtAction(nameof(GetAdmin), new { id = admin.Id }, dto);
+        return Ok("Provider approved successfully.");
     }
 
-    // PUT: api/Admin/5
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutAdmin(int id, AdminDto dto)
+    [HttpPost("providers/{providerId}/reject")]
+    public async Task<IActionResult> RejectProvider(string providerId)
     {
-        if (id != dto.Id)
-            return BadRequest();
+        var provider = await _context.Users.FindAsync(providerId);
+        if (provider == null) return NotFound("Provider not found");
 
-        var admin = await _context.Admins.FindAsync(id);
-        if (admin == null)
-            return NotFound();
-
-        admin.Username = dto.Username;
-        admin.Email = dto.Email;
-
-        _context.Entry(admin).State = EntityState.Modified;
+        provider.Status = "Rejected";
+        _context.Users.Update(provider);
         await _context.SaveChangesAsync();
 
-        return NoContent();
+        return Ok("Provider rejected.");
     }
 
-    // DELETE: api/Admin/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteAdmin(int id)
+    // 📌 مراجعة الطلبات
+    [HttpGet("requests")]
+    public async Task<IActionResult> GetAllRequests()
     {
-        var admin = await _context.Admins.FindAsync(id);
-        if (admin == null)
-            return NotFound();
+        var requests = await _context.Requests
+            .Include(r => r.Client)
+            .ToListAsync();
 
-        _context.Admins.Remove(admin);
+        return Ok(requests);
+    }
+
+    [HttpDelete("requests/{requestId}")]
+    public async Task<IActionResult> DeleteRequest(int requestId)
+    {
+        var request = await _context.Requests.FindAsync(requestId);
+        if (request == null) return NotFound("Request not found");
+
+        _context.Requests.Remove(request);
         await _context.SaveChangesAsync();
 
-        return NoContent();
+        return Ok("Request deleted successfully.");
     }
+
+    // 🛠️ متابعة الشكاوي
+    [HttpGet("complaints")]
+    public async Task<IActionResult> GetComplaints()
+    {
+        var complaints = await _context.Complaints
+            .Include(c => c.Client)
+            .Include(c => c.Provider)
+            .ToListAsync();
+
+        return Ok(complaints);
+    }
+
+    [HttpPost("complaints/{complaintId}/update-status")]
+    public async Task<IActionResult> UpdateComplaintStatus(int complaintId, [FromBody] ComplaintStatus status)
+    {
+        var complaint = await _context.Complaints.FindAsync(complaintId);
+        if (complaint == null) return NotFound("Complaint not found");
+
+        complaint.Status = status;
+        _context.Complaints.Update(complaint);
+        await _context.SaveChangesAsync();
+
+        return Ok("Complaint status updated.");
+    }
+
 }
