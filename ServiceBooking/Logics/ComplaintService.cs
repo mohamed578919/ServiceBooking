@@ -21,7 +21,7 @@ namespace ServiceBooking.Logics
             {
                 Title = dto.Title,
                 Description = dto.Description,
-                Severity = dto.Severity,
+                //Severity = dto.Severity,
                 FiledByUserId = filedByUserId,
                 AgainstUserId = dto.AgainstUserId,
                 RelatedRequestId = dto.RelatedRequestId,

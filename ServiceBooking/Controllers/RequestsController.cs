@@ -1,4 +1,5 @@
-﻿using ApiDay1.Models;
+﻿using System.Security.Claims;
+using ApiDay1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceBooking.DTOs;
@@ -9,99 +10,115 @@ using ServiceBooking.Models;
 public class RequestController : ControllerBase
 {
     private readonly MyContext _context;
+    public RequestController(MyContext context) => _context = context;
 
-    public RequestController(MyContext context)
-    {
-        _context = context;
-    }
-
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<RequestDto>>> GetRequests()
-    {
-        var requests = await _context.Requests
-            .Include(r => r.Client)
-            .Include(r => r.Service)
-            .Select(r => new RequestDto
-            {
-                Id = r.Id,
-                Notes = r.Notes,
-                RequestDate = r.RequestDate,
-                ClientId = r.ClientId,
-                ClientName = r.Client != null ? r.Client.FullName : "",
-                ServiceId = r.ServiceId,
-                ServiceName = r.Service != null ? r.Service.Name : ""
-            }).ToListAsync();
-
-        return Ok(requests);
-    }
-
-    [HttpGet("{id}")]
-    public async Task<ActionResult<RequestDto>> GetRequest(int id)
-    {
-        var r = await _context.Requests
-            .Include(r => r.Client)
-            .Include(r => r.Service)
-            .FirstOrDefaultAsync(r => r.Id == id);
-
-        if (r == null)
-            return NotFound();
-
-        var dto = new RequestDto
-        {
-            Id = r.Id,
-            Notes = r.Notes,
-            RequestDate = r.RequestDate,
-            ClientId = r.ClientId,
-            ClientName = r.Client?.FullName ?? "",
-            ServiceId = r.ServiceId,
-            ServiceName = r.Service?.Name ?? ""
-        };
-
-        return Ok(dto);
-    }
-
+    // POST: api/Requests
     [HttpPost]
-    public async Task<ActionResult> CreateRequest(RequestDto dto)
+    public async Task<IActionResult> Create([FromBody] RequestCreateDto dto)
     {
+        if (!ModelState.IsValid) return BadRequest(ModelState);
+
+        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+
         var request = new Request
         {
+            Title = dto.Title,
+            Description = dto.Description,
+            ServiceId = dto.ServiceId,
             Notes = dto.Notes,
-            RequestDate = dto.RequestDate,
-            ClientId = dto.ClientId,
-            ServiceId = dto.ServiceId
+            RequestDate = DateTime.UtcNow,
+            Status = "Pending",
+            ClientId = clientId
         };
 
         _context.Requests.Add(request);
         await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetRequest), new { id = request.Id }, dto);
+        return CreatedAtAction(nameof(GetById), new { id = request.Id }, request);
     }
 
-    [HttpPut("{id}")]
-    public async Task<ActionResult> UpdateRequest(int id, RequestDto dto)
+    // GET: api/Requests/my-requests
+    [HttpGet("my-requests")]
+    public async Task<IActionResult> MyRequests()
     {
-        var request = await _context.Requests.FindAsync(id);
-        if (request == null)
-            return NotFound();
+        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
 
-        request.Notes = dto.Notes;
-        request.RequestDate = dto.RequestDate;
-        request.ClientId = dto.ClientId;
-        request.ServiceId = dto.ServiceId;
+        var my = await _context.Requests
+            .Include(r => r.Service)
+            .Where(r => r.ClientId == clientId)
+            .OrderByDescending(r => r.Id)
+            .ToListAsync();
 
-        await _context.SaveChangesAsync();
-        return NoContent();
+        return Ok(my);
     }
 
-    [HttpDelete("{id}")]
-    public async Task<ActionResult> DeleteRequest(int id)
+    // GET: api/Requests/5
+    [HttpGet("{id:int}")]
+    public async Task<IActionResult> GetById(int id)
     {
-        var request = await _context.Requests.FindAsync(id);
-        if (request == null)
-            return NotFound();
+        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
 
-        _context.Requests.Remove(request);
+        var r = await _context.Requests
+            .Include(x => x.Service)
+            .FirstOrDefaultAsync(x => x.Id == id && x.ClientId == clientId);
+
+        return r is null ? NotFound() : Ok(r);
+    }
+
+    // PUT: api/Requests/5
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> Update(int id, [FromBody] RequestUpdateDto dto)
+    {
+        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+
+        var r = await _context.Requests.FirstOrDefaultAsync(x => x.Id == id && x.ClientId == clientId);
+        if (r is null) return NotFound();
+
+        r.Title = dto.Title;
+        r.Description = dto.Description;
+        r.ServiceId = dto.ServiceId;
+        r.Notes = dto.Notes;
+        r.RequestDate = dto.PreferredDate ?? r.RequestDate;
+        if (!string.IsNullOrWhiteSpace(dto.Status)) r.Status = dto.Status;
+
         await _context.SaveChangesAsync();
-        return NoContent();
+        return Ok(r);
+    }
+
+    // DELETE: api/Requests/5
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+
+        var r = await _context.Requests.FirstOrDefaultAsync(x => x.Id == id && x.ClientId == clientId);
+        if (r is null) return NotFound();
+
+        _context.Requests.Remove(r);
+        await _context.SaveChangesAsync();
+        return Ok(new { message = "Deleted" });
+    }
+
+    // GET: api/Requests/5/applications  (يتابع التقديمات على الطلب بتاعه)
+    [HttpGet("{id:int}/applications")]
+    public async Task<IActionResult> GetApplications(int id)
+    {
+        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+
+        var exists = await _context.Requests.AnyAsync(r => r.Id == id && r.ClientId == clientId);
+        if (!exists) return NotFound();
+
+        var apps = await _context.Applications
+            .Include(a => a.Provider)
+            .Where(a => a.RequestId == id)
+            .OrderByDescending(a => a.AppliedAt)
+            .ToListAsync();
+
+        return Ok(apps);
     }
 }

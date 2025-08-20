@@ -49,92 +49,30 @@
   },
   {
     "ContainingType": "AdminController",
-    "Method": "GetAdmins",
-    "RelativePath": "api/Admin",
+    "Method": "GetComplaints",
+    "RelativePath": "api/Admin/complaints",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.DTOs.AdminDto, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "AdminController",
-    "Method": "PostAdmin",
-    "RelativePath": "api/Admin",
+    "Method": "UpdateComplaintStatus",
+    "RelativePath": "api/Admin/complaints/{complaintId}/update-status",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.AdminDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.AdminDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "GetAdmin",
-    "RelativePath": "api/Admin/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.AdminDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "PutAdmin",
-    "RelativePath": "api/Admin/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
+        "Name": "complaintId",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.AdminDto",
+        "Name": "status",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -142,18 +80,80 @@
   },
   {
     "ContainingType": "AdminController",
-    "Method": "DeleteAdmin",
-    "RelativePath": "api/Admin/{id}",
+    "Method": "ApproveProvider",
+    "RelativePath": "api/Admin/providers/{providerId}/approve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
+    "Method": "RejectProvider",
+    "RelativePath": "api/Admin/providers/{providerId}/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "providerId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
+    "Method": "GetPendingProviders",
+    "RelativePath": "api/Admin/providers/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
+    "Method": "GetAllRequests",
+    "RelativePath": "api/Admin/requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
+    "Method": "DeleteRequest",
+    "RelativePath": "api/Admin/requests/{requestId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "requestId",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AdminController",
+    "Method": "GetStatistics",
+    "RelativePath": "api/Admin/statistics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -200,55 +200,35 @@
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "GetClients",
-    "RelativePath": "api/Client",
+    "Method": "GetApplicationsForMyRequests",
+    "RelativePath": "api/Client/ApplicationsForMyRequests",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.DTOs.ClientDto, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "PostClient",
-    "RelativePath": "api/Client",
+    "Method": "CreateRequest",
+    "RelativePath": "api/Client/CreateRequest",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ClientDto",
+        "Name": "requestDto",
+        "Type": "ServiceBooking.Models.Request",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ClientDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "GetClient",
-    "RelativePath": "api/Client/{id}",
-    "HttpMethod": "GET",
+    "Method": "DeleteRequest",
+    "RelativePath": "api/Client/DeleteRequest/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -258,22 +238,22 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ClientDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "PutClient",
-    "RelativePath": "api/Client/{id}",
+    "Method": "GetMyRequests",
+    "RelativePath": "api/Client/MyRequests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ClientController",
+    "Method": "UpdateRequest",
+    "RelativePath": "api/Client/UpdateRequest/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -284,24 +264,8 @@
         "IsRequired": true
       },
       {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ClientDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "DeleteClient",
-    "RelativePath": "api/Client/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "updatedRequest",
+        "Type": "ServiceBooking.Models.Request",
         "IsRequired": true
       }
     ],
@@ -321,114 +285,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ComplaintDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ComplaintController",
-    "Method": "GetById",
-    "RelativePath": "api/Complaint/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ComplaintDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
-    "Method": "UpdateStatus",
-    "RelativePath": "api/Complaint/{id}/status",
-    "HttpMethod": "PATCH",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ComplaintUpdateStatusDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ComplaintDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
-    "Method": "GetAgainstMe",
-    "RelativePath": "api/Complaint/against-me",
+    "Method": "MyComplaints",
+    "RelativePath": "api/Complaint/my",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.DTOs.ComplaintDto, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
-    "Method": "GetMine",
-    "RelativePath": "api/Complaint/mine",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.DTOs.ComplaintDto, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ProviderController",
@@ -495,27 +362,7 @@
   },
   {
     "ContainingType": "RequestController",
-    "Method": "GetRequests",
-    "RelativePath": "api/Request",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.DTOs.RequestDto, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "RequestController",
-    "Method": "CreateRequest",
+    "Method": "Create",
     "RelativePath": "api/Request",
     "HttpMethod": "POST",
     "IsController": true,
@@ -523,7 +370,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "ServiceBooking.DTOs.RequestDto",
+        "Type": "ServiceBooking.DTOs.RequestCreateDto",
         "IsRequired": true
       }
     ],
@@ -531,7 +378,7 @@
   },
   {
     "ContainingType": "RequestController",
-    "Method": "GetRequest",
+    "Method": "GetById",
     "RelativePath": "api/Request/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -543,21 +390,11 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.RequestDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "RequestController",
-    "Method": "UpdateRequest",
+    "Method": "Update",
     "RelativePath": "api/Request/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -570,7 +407,7 @@
       },
       {
         "Name": "dto",
-        "Type": "ServiceBooking.DTOs.RequestDto",
+        "Type": "ServiceBooking.DTOs.RequestUpdateDto",
         "IsRequired": true
       }
     ],
@@ -578,7 +415,7 @@
   },
   {
     "ContainingType": "RequestController",
-    "Method": "DeleteRequest",
+    "Method": "Delete",
     "RelativePath": "api/Request/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -590,6 +427,32 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RequestController",
+    "Method": "GetApplications",
+    "RelativePath": "api/Request/{id}/applications",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RequestController",
+    "Method": "MyRequests",
+    "RelativePath": "api/Request/my-requests",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
