@@ -11,6 +11,7 @@ namespace ServiceBooking.Models
         public string? VerificationCode { get; set; }
         public bool IsVerified { get; set; } = false;
 
+<<<<<<< HEAD
         // ✅ Service navigation واحدة بس
         public ICollection<Service> Services { get; set; } = new List<Service>();
 
@@ -20,6 +21,10 @@ namespace ServiceBooking.Models
 
         // Requests submitted by this client
         public ICollection<Request>? Requests { get; set; }
+=======
+        public string FullName { get; set; }
+        public string? NationalIdImage { get; set; }
+>>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
 
     }
 }

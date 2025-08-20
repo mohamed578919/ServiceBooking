@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServiceBooking")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+72bdc3a14bc7bf9761cfc7ac787ef6734e47cb0c")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60de600ab59f7345c5c92efbb044eb955b516ef0")]
+>>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
 [assembly: System.Reflection.AssemblyProductAttribute("ServiceBooking")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServiceBooking")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

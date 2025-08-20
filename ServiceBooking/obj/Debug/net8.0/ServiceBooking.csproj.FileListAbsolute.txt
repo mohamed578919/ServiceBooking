@@ -295,6 +295,7 @@ C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\re
 C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\ServiceBooking.pdb
 C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\ServiceBooking.genruntimeconfig.cache
 C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\obj\Debug\net8.0\ref\ServiceBooking.dll
+<<<<<<< HEAD
 H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\bin\Debug\net8.0\appsettings.Development.json
 H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\bin\Debug\net8.0\appsettings.json
 H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\bin\Debug\net8.0\ServiceBooking.staticwebassets.endpoints.json
@@ -446,3 +447,6 @@ H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\obj\Debug\net8.
 H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\obj\Debug\net8.0\ServiceBooking.pdb
 H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\obj\Debug\net8.0\ServiceBooking.genruntimeconfig.cache
 H:\my projects\ServiceBooking-main\ServiceBooking\ServiceBooking\obj\Debug\net8.0\ref\ServiceBooking.dll
+=======
+C:\Users\androw\Source\Repos\ServiceBookingfi\ServiceBooking\bin\Debug\net8.0\ServiceBooking.staticwebassets.runtime.json
+>>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd

@@ -1,12 +1,29 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "OjviTvHRO/+yA59zatlmJtdhVh/AUm72VDxTW+hVZzE=",
+=======
+  "Hash": "qwdWw3E2Z+T6ed2FBoVXZjb4J49BAM2DGm5/j5QLybI=",
+>>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
   "Source": "ServiceBooking",
   "BasePath": "_content/ServiceBooking",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
+<<<<<<< HEAD
   "DiscoveryPatterns": [],
   "Assets": [],
   "Endpoints": []
+=======
+  "DiscoveryPatterns": [
+    {
+      "Name": "ServiceBooking\\wwwroot",
+      "Source": "ServiceBooking",
+      "ContentRoot": "C:\\Users\\androw\\Source\\Repos\\ServiceBookingfi\\ServiceBooking\\wwwroot\\",
+      "BasePath": "_content/ServiceBooking",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+>>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
 }
