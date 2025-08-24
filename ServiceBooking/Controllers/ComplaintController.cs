@@ -1,65 +1,53 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using ServiceBooking.Models;
-using Microsoft.EntityFrameworkCore;
-using ApiDay1.Models;
-using Microsoft.AspNetCore.Authorization;
-using ServiceBooking.DTOs;
-using ServiceBooking.Logics;
-using System.Security.Claims;
-using ServiceBooking.Enums;
+﻿//using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Mvc;
+//using ServiceBooking.Models;
+//using Microsoft.EntityFrameworkCore;
+//using ApiDay1.Models;
+//using Microsoft.AspNetCore.Authorization;
+//using ServiceBooking.DTOs;
+//using ServiceBooking.Logics;
+//using System.Security.Claims;
+//using ServiceBooking.Enums;
 
-namespace ServiceBooking.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ComplaintController : ControllerBase
-    {
-        private readonly MyContext _context;
-        public ComplaintController(MyContext context) => _context = context;
+//namespace ServiceBooking.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class ComplaintController : ControllerBase
+//    {
+//        private readonly ComplaintService _complaintService;
+//        private readonly ICurrentUser _currentUser;
 
-        // POST: api/Complaints
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] ComplaintCreateDto dto)
-        {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+//        public ComplaintController(ComplaintService complaintService, ICurrentUser currentUser)
+//        {
+//            _complaintService = complaintService;
+//            _currentUser = currentUser;
+//        }
 
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userId)) return Unauthorized();
+//        [HttpPost]
+//        [Authorize] // لازم المستخدم يكون مسجل دخول
+//        public async Task<IActionResult> CreateComplaint([FromBody] ComplaintCreateDto dto)
+//        {
+//            var complaint = await _complaintService.CreateComplaintAsync(dto);
+//            return Ok(complaint);
+//        }
 
-            var against = await _context.Users.FindAsync(dto.AgainstUserId);
-            if (against is null) return BadRequest("AgainstUser not found");
+//        [HttpGet("filed")]
+//        [Authorize]
+//        public IActionResult GetFiledComplaints()
+//        {
+//            var userId = _currentUser.GetUserId();
+//            var complaints = _complaintService.GetComplaintsFiledByUser(userId).ToList();
+//            return Ok(complaints);
+//        }
 
-            var complaint = new Complaint
-            {
-                Title = dto.Title,
-                Description = dto.Description,
-                FiledByUserId = userId,
-                AgainstUserId = dto.AgainstUserId,
-                RelatedRequestId = dto.RelatedRequestId,
-                RelatedServiceId = dto.RelatedServiceId,
-                CreatedAtUtc = DateTime.UtcNow,
-                Status = ComplaintStatus.Open
-            };
-
-            _context.Complaints.Add(complaint);
-            await _context.SaveChangesAsync();
-            return Ok(complaint);
-        }
-
-        // GET: api/Complaints/my
-        [HttpGet("my")]
-        public async Task<IActionResult> MyComplaints()
-        {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userId)) return Unauthorized();
-
-            var list = await _context.Complaints
-                .Where(c => c.FiledByUserId == userId)
-                .OrderByDescending(c => c.CreatedAtUtc)
-                .ToListAsync();
-
-            return Ok(list);
-        }
-    }
-}
+//        [HttpGet("against")]
+//        [Authorize]
+//        public IActionResult GetComplaintsAgainst()
+//        {
+//            var userId = _currentUser.GetUserId();
+//            var complaints = _complaintService.GetComplaintsAgainstUser(userId).ToList();
+//            return Ok(complaints);
+//        }
+//    }
+//}

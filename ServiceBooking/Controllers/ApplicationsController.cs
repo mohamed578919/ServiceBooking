@@ -1,9 +1,11 @@
 ﻿using ApiDay1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServiceBooking.DTOs;
+using ServiceBooking.Logics;
 using ServiceBooking.Models;
 using System.Security.Claims;
 
@@ -15,94 +17,201 @@ namespace ServiceBooking.Controllers
     {
         private readonly MyContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public ApplicationsController(MyContext context, UserManager<ApplicationUser> userManager)
+        public ApplicationsController(MyContext context, IHttpContextAccessor httpContextAccessor)
         {
             _context = context;
-            _userManager = userManager;
+            _httpContextAccessor = httpContextAccessor;
         }
 
-        // ✅ Provider يقدم على Request
-        [HttpPost("apply")]
-        public async Task<IActionResult> ApplyToRequest(ApplicationDTO dto)
+
+     
+     
+        // Create Application
+        [HttpPost("Create")]
+        //[Authorize(Roles = "Provider")]
+        public async Task<IActionResult> CreateApplication([FromBody] CreateApplicationDto dto)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            var provider = await _userManager.FindByIdAsync(userId);
-            if (provider == null)
-                return Unauthorized("Invalid provider");
+            var user = await _context.Users
+           .FirstOrDefaultAsync(u => u.UserName == dto.ProviderUserName);
 
-            // لازم يكون Provider
-            var roles = await _userManager.GetRolesAsync(provider);
-            if (!roles.Contains("Provider"))
-                return Forbid();
+            if (user == null)
+                return NotFound("User not found");
 
-            // تأكد أن الطلب موجود
-            var request = await _context.Requests.FindAsync(dto.RequestId);
-            if (request == null)
-                return NotFound("Request not found");
+            var Provider = await _context.Providers
+                .FirstOrDefaultAsync(c => c.UserId == user.Id);
 
-            // تأكد أنه مفيش Duplicate
-            var alreadyApplied = await _context.Applications
-                .AnyAsync(a => a.RequestId == dto.RequestId && a.ProviderId == provider.Id);
+            if (Provider == null)
+                return NotFound("Client not found");
 
-            if (alreadyApplied)
-                return BadRequest("You have already applied to this request");
+            var ProviderId = Provider.Id;
+
+            
+
+            var request = await _context.Requests.FindAsync(dto.ServiceRequestId);
+            if (request == null) return NotFound("Request not found");
 
             var application = new Application
             {
-                RequestId = dto.RequestId,
-                ProviderId = provider.Id,
-                Message = dto.Message,
-                AppliedAt = DateTime.UtcNow
+                Message = dto.ProposalText,
+                ProposedPrice = dto.ProposedPrice,
+                RequestId = dto.ServiceRequestId,
+                Notes = dto.Note,
+                ProviderId = ProviderId,
+                phoneNumber= dto.PhoneNumber
             };
 
             _context.Applications.Add(application);
             await _context.SaveChangesAsync();
 
-            return Ok("Application submitted successfully");
+            return Ok(new { application.Id });
         }
 
-        // ✅ جلب كل الـ Applications الخاصة بـ Request معين (العميل يشوف المتقدمين)
-        [HttpGet("request/{requestId}")]
-        public async Task<IActionResult> GetApplicationsForRequest(int requestId)
-        {
-            var applications = await _context.Applications
-                .Where(a => a.RequestId == requestId)
-                .Include(a => a.Provider)
-                .Select(a => new
-                {
-                    a.Id,
-                    a.Message,
-                    a.AppliedAt,
-                    ProviderName = a.Provider.UserName,
-                    ProviderId = a.ProviderId
-                })
-                .ToListAsync();
 
-            return Ok(applications);
+
+        //==========================================================================================
+
+
+        // Update Application (only by owner)
+        [HttpPut("{id}")]
+        //[Authorize(Roles = "Provider")]
+        public async Task<IActionResult> UpdateApplication(int id, [FromBody] UpdateApplicationDto dto)
+        {
+
+            var user = await _context.Users
+          .FirstOrDefaultAsync(u => u.UserName == dto.ProviderUserName);
+
+            if (user == null)
+                return NotFound("User not found");
+
+            var Provider = await _context.Providers
+                .FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+            if (Provider == null)
+                return NotFound("Client not found");
+
+            var ProviderId = Provider.Id;
+
+
+
+            var app = await _context.Applications.FindAsync(id);
+
+            if (app == null) return NotFound();
+            if (app.ProviderId != ProviderId) return Forbid();
+
+            app.Message = dto.ProposalText;
+            app.ProposedPrice = dto.ProposedPrice;
+            app.UpdatedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return Ok("Updated successfully");
         }
 
-        // ✅ Provider يشوف كل الطلبات اللي قدم عليها
-        [HttpGet("my-applications")]
-        public async Task<IActionResult> GetMyApplications()
+
+        //==========================================================================
+
+
+
+        //// Delete Application (only by owner)
+        //[HttpDelete("{id}")]
+        ////[Authorize(Roles = "Provider")]
+        //public async Task<IActionResult> DeleteApplication(int id)
+        //{
+
+        //    var user = await _context.Users
+        //  .FirstOrDefaultAsync(u => u.UserName == dto.ProviderUserName);
+
+        //    if (user == null)
+        //        return NotFound("User not found");
+
+        //    var Provider = await _context.Providers
+        //        .FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+        //    if (Provider == null)
+        //        return NotFound("Client not found");
+
+        //    var ProviderId = Provider.Id;
+
+
+
+        //    var app = await _context.Applications.FindAsync(id);
+
+        //    if (app == null) return NotFound();
+        //    if (app.ProviderId != ProviderId) return Forbid();
+
+        //    _context.Applications.Remove(app);
+        //    await _context.SaveChangesAsync();
+
+        //    return Ok("Deleted successfully");
+        //}
+
+
+        //==============================================================================
+        [HttpGet("GetMyApplications")]
+        public async Task<IActionResult> GetMyApplications([FromQuery] string ProviderUserName)
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == ProviderUserName);
+
+            if (user == null)
+                return NotFound("User not found");
+
+            var provider = await _context.Providers.FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+            if (provider == null)
+                return NotFound("Provider not found");
 
             var apps = await _context.Applications
-                .Where(a => a.ProviderId == userId)
+                .Where(a => a.ProviderId == provider.Id)
                 .Include(a => a.Request)
-                .Select(a => new
+                .Select(a => new ApplicationDTO
                 {
-                    a.Id,
-                    a.Message,
-                    a.AppliedAt,
-                    RequestTitle = a.Request.Notes,
-                    RequestId = a.RequestId
+                    Id = a.Id,
+                    Message = a.Message,
+                    ProposedPrice = a.ProposedPrice,
+                    CreatedAt = a.AppliedAt,
+                    RequestTitle = a.Request.Title
                 })
                 .ToListAsync();
 
             return Ok(apps);
         }
+
+
+
+
+
+        //=========================================================================
+
+
+        //// Get Applications for a Request (client only)
+        //[HttpGet("request/{requestId}")]
+        //[Authorize(Roles = "Client")]
+        //public async Task<IActionResult> GetApplicationsForRequest(int requestId)
+        //{
+        //    var clientId = GetUserId();
+
+        //    var request = await _context.Requests
+        //        .Include(r => r.Applications)
+        //        .ThenInclude(a => a.Provider)
+        //        .ThenInclude(c => c.User)
+        //        .FirstOrDefaultAsync(r => r.Id == requestId);
+
+        //    if (request == null) return NotFound();
+        //    if (request.ClientId != clientId) return Forbid();
+
+        //    var apps = request.Applications.Select(a => new
+        //    {
+        //        a.Id,
+        //        a.Message,
+        //        a.ProposedPrice,
+        //        a.AppliedAt,
+        //        ProviderName = a.Provider.User.Full_Name
+        //    });
+
+        //    return Ok(apps);
+        //}
+
     }
 }

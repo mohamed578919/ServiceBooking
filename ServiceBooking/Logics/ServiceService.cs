@@ -1,88 +1,101 @@
-﻿using ApiDay1.Models;
-using Microsoft.EntityFrameworkCore;
-using ServiceBooking.DTOs;
-using ServiceBooking.Models;
+﻿//using ApiDay1.Models;
+//using Microsoft.EntityFrameworkCore;
+//using ServiceBooking.DTOs;
+//using ServiceBooking.Logics;
+//using ServiceBooking.Models;
 
-namespace ServiceBooking.Logics
-{
-    public class ServiceService : IServiceService
-    {
-        private readonly MyContext _db;
+//public class ServiceService 
+//{
+//    private readonly MyContext _db;
 
-        public ServiceService(MyContext db) => _db = db;
+//    public ServiceService(MyContext db) => _db = db;
 
-        public async Task<ServiceDto> CreateAsync(string providerId, ServiceCreateDto dto)
-        {
-            var exists = await _db.Services.AnyAsync(s => s.ProviderId == providerId && s.Name == dto.Name);
-            if (exists) throw new InvalidOperationException("Service with same name already exists for this provider.");
+//    public async Task<ServiceDto> CreateAsync(int providerId, ServiceCreateDto dto)
+//    {
+//        // لو السيرفس موجودة بنفس الاسم
+//        var service = await _db.Services.FirstOrDefaultAsync(s => s.Name == dto.Name);
+//        if (service == null)
+//        {
+//            service = new Service
+//            {
+//                Name = dto.Name,
+//                Description = dto.Description,
+//                HourlyRate = dto.HourlyRate,
+//                ExperienceYears = dto.ExperienceYears,
+//                IsActive = true
+//            };
+//            _db.Services.Add(service);
+//            await _db.SaveChangesAsync();
+//        }
 
-            var entity = new Service
-            {
-                ProviderId = providerId,
-                Name = dto.Name,
-                Description = dto.Description,
-                HourlyRate = dto.HourlyRate,
-                ExperienceYears = dto.ExperienceYears,
-                IsActive = true
-            };
+//        // اربط البروفايدر بالسيرفس (لو مش مربوط قبل كده)
+//        var alreadyLinked = await _db.ProviderSkills
+//            .AnyAsync(ps => ps.ProviderId == providerId && ps.ServiceCategoryId == service.Id);
 
-            _db.Services.Add(entity);
-            await _db.SaveChangesAsync();
+//        if (!alreadyLinked)
+//        {
+//            _db.ProviderSkills.Add(new ProviderSkill
+//            {
+//                ProviderId = providerId,
+//                ServiceCategoryId = service.Id
+//            });
+//            await _db.SaveChangesAsync();
+//        }
 
-            return Map(entity);
-        }
+//        return Map(service);
+//    }
 
-        public async Task<ServiceDto?> GetByIdAsync(int id)
-        {
-            var s = await _db.Services.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
-            return s is null ? null : Map(s);
-        }
+//    public async Task<IEnumerable<ServiceDto>> GetByProviderAsync(int providerId)
+//    {
+//        return await _db.ProviderSkills
+//            .Where(ps => ps.ProviderId == providerId)
+//            .Select(ps => Map(ps.ServiceCategory))
+//            .ToListAsync();
+//    }
 
-        public async Task<IEnumerable<ServiceDto>> GetByProviderAsync(string providerId)
-        {
-            return await _db.Services.AsNoTracking()
-                .Where(s => s.ProviderId == providerId)
-                .Select(s => Map(s))
-                .ToListAsync();
-        }
+//    public async Task<ServiceDto?> GetByIdAsync(int id)
+//    {
+//        var s = await _db.Services.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+//        return s is null ? null : Map(s);
+//    }
 
-        public async Task<ServiceDto> UpdateAsync(int id, string providerId, ServiceUpdateDto dto)
-        {
-            var s = await _db.Services.FirstOrDefaultAsync(x => x.Id == id && x.ProviderId == providerId)
-                ?? throw new KeyNotFoundException("Service not found or not owned by provider.");
+//    public async Task<ServiceDto> UpdateAsync(int id, ServiceUpdateDto dto)
+//    {
+//        var s = await _db.Services.FirstOrDefaultAsync(x => x.Id == id)
+//            ?? throw new KeyNotFoundException("Service not found.");
 
-            // لا تسمح بتكرار الاسم لنفس البروفايدر
-            var nameTaken = await _db.Services.AnyAsync(x => x.ProviderId == providerId && x.Name == dto.Name && x.Id != id);
-            if (nameTaken) throw new InvalidOperationException("Another service with the same name exists.");
+//        s.Name = dto.Name;
+//        s.Description = dto.Description;
+//        s.HourlyRate = dto.HourlyRate;
+//        s.ExperienceYears = dto.ExperienceYears;
+//        s.IsActive = dto.IsActive;
 
-            s.Name = dto.Name;
-            s.Description = dto.Description;
-            s.HourlyRate = dto.HourlyRate;
-            s.ExperienceYears = dto.ExperienceYears;
-            s.IsActive = dto.IsActive;
+//        await _db.SaveChangesAsync();
+//        return Map(s);
+//    }
 
-            await _db.SaveChangesAsync();
-            return Map(s);
-        }
+//    public async Task DeleteAsync(int serviceId, int providerId)
+//    {
+//        var link = await _db.ProviderSkills
+//            .FirstOrDefaultAsync(ps => ps.ServiceCategoryId == serviceId && ps.ProviderId == providerId);
 
-        public async Task DeleteAsync(int id, string providerId)
-        {
-            var s = await _db.Services.FirstOrDefaultAsync(x => x.Id == id && x.ProviderId == providerId)
-                ?? throw new KeyNotFoundException("Service not found or not owned by provider.");
+//        if (link == null)
+//            throw new KeyNotFoundException("Service not linked to this provider.");
 
-            _db.Services.Remove(s);
-            await _db.SaveChangesAsync();
-        }
+//        _db.ProviderSkills.Remove(link);
+//        await _db.SaveChangesAsync();
+//    }
 
-        private static ServiceDto Map(Service s) => new()
-        {
-            Id = s.Id,
-            ProviderId = s.ProviderId,
-            Name = s.Name,
-            Description = s.Description,
-            HourlyRate = s.HourlyRate,
-            ExperienceYears = s.ExperienceYears,
-            IsActive = s.IsActive
-        };
-    }
-}
+//    private static ServiceDto Map(Service s)
+//    {
+//        return new()
+//        {
+//            Id = s.Id,
+//            Name = s.Name,
+//            Description = s.Description,
+//            HourlyRate = s.HourlyRate,
+//            ExperienceYears = s.ExperienceYears,
+//            IsActive = s.IsActive
+//        };
+//    }
+//}

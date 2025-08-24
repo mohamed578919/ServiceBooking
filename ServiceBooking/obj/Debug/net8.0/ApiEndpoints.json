@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "ServiceBooking.Controllers.AccountController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Account/profile",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.AccountController",
     "Method": "Register",
     "RelativePath": "api/Account/Register",
     "HttpMethod": "POST",
@@ -83,125 +93,37 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "AdminController",
-    "Method": "GetComplaints",
-    "RelativePath": "api/Admin/complaints",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "UpdateComplaintStatus",
-    "RelativePath": "api/Admin/complaints/{complaintId}/update-status",
-    "HttpMethod": "POST",
+    "ContainingType": "ServiceBooking.Controllers.ApplicationsController",
+    "Method": "UpdateApplication",
+    "RelativePath": "api/Applications/{id}",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "complaintId",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
-        "Name": "status",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "ServiceBooking.DTOs.UpdateApplicationDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "ApproveProvider",
-    "RelativePath": "api/Admin/providers/{providerId}/approve",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "providerId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "RejectProvider",
-    "RelativePath": "api/Admin/providers/{providerId}/reject",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "providerId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "GetPendingProviders",
-    "RelativePath": "api/Admin/providers/pending",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "GetAllRequests",
-    "RelativePath": "api/Admin/requests",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "DeleteRequest",
-    "RelativePath": "api/Admin/requests/{requestId}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "requestId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "AdminController",
-    "Method": "GetStatistics",
-    "RelativePath": "api/Admin/statistics",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ApplicationsController",
-    "Method": "ApplyToRequest",
-    "RelativePath": "api/Applications/apply",
+    "Method": "CreateApplication",
+    "RelativePath": "api/Applications/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ApplicationDTO",
+        "Type": "ServiceBooking.DTOs.CreateApplicationDto",
         "IsRequired": true
       }
     ],
@@ -210,33 +132,23 @@
   {
     "ContainingType": "ServiceBooking.Controllers.ApplicationsController",
     "Method": "GetMyApplications",
-    "RelativePath": "api/Applications/my-applications",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ApplicationsController",
-    "Method": "GetApplicationsForRequest",
-    "RelativePath": "api/Applications/request/{requestId}",
+    "RelativePath": "api/Applications/GetMyApplications",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "requestId",
-        "Type": "System.Int32",
-        "IsRequired": true
+        "Name": "ProviderUserName",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "GetApplicationsForMyRequests",
-    "RelativePath": "api/Client/ApplicationsForMyRequests",
+    "Method": "GetAllClients",
+    "RelativePath": "api/Client/GetAllClients",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -245,191 +157,123 @@
   },
   {
     "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "CreateRequest",
-    "RelativePath": "api/Client/CreateRequest",
+    "Method": "GetCurrentClient",
+    "RelativePath": "api/Client/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ClientUserNamed",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.PaymentTransactionController",
+    "Method": "CompleteOrder",
+    "RelativePath": "api/PaymentTransaction/CompleteOrder",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "requestDto",
-        "Type": "ServiceBooking.Models.Request",
+        "Name": "data",
+        "Type": "System.Text.Json.Nodes.JsonObject",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ServiceBooking.Controllers.ClientController",
-    "Method": "DeleteRequest",
-    "RelativePath": "api/Client/DeleteRequest/{id}",
-    "HttpMethod": "DELETE",
+    "ContainingType": "ServiceBooking.Controllers.PaymentTransactionController",
+    "Method": "CreateOrder",
+    "RelativePath": "api/PaymentTransaction/CreateOrder",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Name": "data",
+        "Type": "System.Text.Json.Nodes.JsonObject",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ServiceBooking.Controllers.ClientController",
+    "ContainingType": "ServiceBooking.Controllers.PaymentTransactionController",
+    "Method": "GetPaypalAccessToken",
+    "RelativePath": "api/PaymentTransaction/GetAccessToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ProviderController",
+    "Method": "GetAllProviders",
+    "RelativePath": "api/Provider/GetAllProviders",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ProviderController",
+    "Method": "GetCurrentProvider",
+    "RelativePath": "api/Provider/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProviderUserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RequestController",
     "Method": "GetMyRequests",
-    "RelativePath": "api/Client/MyRequests",
+    "RelativePath": "api/Request/{ClientUserNamed}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "ClientUserNamed",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ServiceBooking.Controllers.ClientController",
+    "ContainingType": "RequestController",
+    "Method": "GetRequestDetails",
+    "RelativePath": "api/Request/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RequestController",
     "Method": "UpdateRequest",
-    "RelativePath": "api/Client/UpdateRequest/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "updatedRequest",
-        "Type": "ServiceBooking.Models.Request",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
-    "Method": "Create",
-    "RelativePath": "api/Complaint",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ComplaintCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ComplaintController",
-    "Method": "MyComplaints",
-    "RelativePath": "api/Complaint/my",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ProviderController",
-    "Method": "GetProviderApplications",
-    "RelativePath": "api/Provider/{providerId}/applications",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "providerId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.Models.Application, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ProviderController",
-    "Method": "ApplyForRequest",
-    "RelativePath": "api/Provider/{providerId}/apply/{requestId}",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "providerId",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "requestId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ProviderController",
-    "Method": "GetAvailableRequests",
-    "RelativePath": "api/Provider/{providerId}/available-requests",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "providerId",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RequestController",
-    "Method": "Create",
-    "RelativePath": "api/Request",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.RequestCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RequestController",
-    "Method": "GetById",
-    "RelativePath": "api/Request/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RequestController",
-    "Method": "Update",
     "RelativePath": "api/Request/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -442,7 +286,7 @@
       },
       {
         "Name": "dto",
-        "Type": "ServiceBooking.DTOs.RequestUpdateDto",
+        "Type": "ServiceBooking.DTOs.UpdateServiceRequestDto",
         "IsRequired": true
       }
     ],
@@ -450,40 +294,8 @@
   },
   {
     "ContainingType": "RequestController",
-    "Method": "Delete",
-    "RelativePath": "api/Request/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RequestController",
-    "Method": "GetApplications",
-    "RelativePath": "api/Request/{id}/applications",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RequestController",
-    "Method": "MyRequests",
-    "RelativePath": "api/Request/my-requests",
+    "Method": "GetAllRequests",
+    "RelativePath": "api/Request/All",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -491,143 +303,61 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ServiceBooking.Controllers.ServiceController",
-    "Method": "Create",
-    "RelativePath": "api/Service",
+    "ContainingType": "RequestController",
+    "Method": "GetClientApplications",
+    "RelativePath": "api/Request/Applications/{clientUserName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clientUserName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RequestController",
+    "Method": "CreateRequest",
+    "RelativePath": "api/Request/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ServiceCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ServiceDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ServiceController",
-    "Method": "GetById",
-    "RelativePath": "api/Service/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ServiceDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ServiceController",
-    "Method": "Update",
-    "RelativePath": "api/Service/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "ServiceBooking.DTOs.ServiceUpdateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "ServiceBooking.DTOs.ServiceDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.ServiceController",
-    "Method": "Delete",
-    "RelativePath": "api/Service/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
+        "Type": "ServiceBooking.DTOs.CreateServiceRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "ServiceBooking.Controllers.ServiceController",
-    "Method": "GetMine",
-    "RelativePath": "api/Service/mine",
+    "ContainingType": "RequestController",
+    "Method": "SearchRequests",
+    "RelativePath": "api/Request/search",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.DTOs.ServiceDto, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "ServiceBooking.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[ServiceBooking.WeatherForecast, ServiceBooking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ServiceBooking.Controllers.ServiceController",
+    "Method": "GetServiceNames",
+    "RelativePath": "api/Service/GetServiceNames",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

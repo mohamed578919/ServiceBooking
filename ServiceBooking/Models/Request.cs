@@ -1,16 +1,22 @@
-﻿namespace ServiceBooking.Models
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace ServiceBooking.Models
 {
     public class Request
     {
         public int Id { get; set; }
-        public string? Title { get; set; }
-        public string? Description { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Category { get; set; }
+        [Precision(18, 2)]
+        public decimal Budget { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Foreign Key للكيلنت
-        public string ClientId { get; set; }
+        public int ClientId { get; set; }
 
         // Navigation Property للعميل
-        public ApplicationUser Client { get; set; }
+        public Client Client { get; set; }
 
         // Foreign Key للخدمة المطلوبة
         public int ServiceId { get; set; }
@@ -25,7 +31,15 @@
 
         public string? Notes { get; set; }
 
-       
-        public ICollection<Application>? Applications { get; set; }
+
+
+        //==============================================================
+
+        public PaymentTransaction? PaymentTransaction { get; set; }
+
+        public virtual ICollection<Application>? Applications { get; set; } = new HashSet<Application>();
+
+        public virtual ICollection<Complaint>? Complaints { get; set; } = new HashSet<Complaint>();
+
     }
 }

@@ -5,10 +5,9 @@ namespace ServiceBooking.DTOs
 {
     public class ComplaintCreateDto
     {
-        public string Title { get; set; } = null!;
-        public string Description { get; set; } = null!;
-        public string AgainstUserId { get; set; } = null!;
-        public int? RelatedRequestId { get; set; }
-        public int? RelatedServiceId { get; set; }
+        public string AgainstUserId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public ComplaintSeverity Severity { get; set; } = ComplaintSeverity.Medium;
     }
 }

@@ -15,8 +15,17 @@ namespace ServiceBooking
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddScoped<IServiceService, ServiceService>();
-            builder.Services.AddScoped<IComplaintService, ComplaintService>();
+            //builder.Services.AddScoped<RequestService>();
+            //builder.Services.AddScoped<ApplicationService>();
+            //builder.Services.AddScoped<ChatService>();
+            //builder.Services.AddScoped<ICurrentUser, CurrentUser>();
+            builder.Services.AddHttpContextAccessor();
+
+            builder.Services.AddControllers();
+            builder.Services.AddSignalR();
+
+            builder.Services.AddAuthentication(); 
+            builder.Services.AddAuthorization();
 
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -30,7 +39,9 @@ namespace ServiceBooking
                 .AddDefaultTokenProviders();
 
             // JWT Key
-            var key = Encoding.UTF8.GetBytes("SuperStrongKey_Androw2025_123456");
+            // JWT config from appsettings.json
+            var jwtSettings = builder.Configuration.GetSection("JWT");
+            var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
 
             builder.Services.AddAuthentication(options =>
             {
@@ -47,11 +58,12 @@ namespace ServiceBooking
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    ValidIssuer = "AndrowAPI",
-                    ValidAudience = "AndrowClient",
+                    ValidIssuer = jwtSettings["Issuer"],
+                    ValidAudience = jwtSettings["Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(key)
                 };
             });
+
             builder.Services.AddScoped<IEmailService, EmailService>();
 
             builder.Services.AddCors(options =>
@@ -91,6 +103,7 @@ namespace ServiceBooking
             app.UseAuthorization();
             app.UseStaticFiles();
             app.MapControllers();
+            //app.MapHub<ChatHub>("/hubs/chat");
             app.Run();
         }
     }

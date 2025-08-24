@@ -12,19 +12,62 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/RegisterUserDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/RegisterUserDTO"
+                "type": "object",
+                "properties": {
+                  "UserName": {
+                    "type": "string"
+                  },
+                  "FullName": {
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string"
+                  },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
+                  "Role": {
+                    "type": "string"
+                  },
+                  "Craft": {
+                    "type": "string"
+                  },
+                  "Password": {
+                    "type": "string"
+                  },
+                  "NationalIdImage": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "UserName": {
+                  "style": "form"
+                },
+                "FullName": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "Role": {
+                  "style": "form"
+                },
+                "Craft": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                },
+                "NationalIdImage": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -91,6 +134,18 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Account/profile": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -1095,7 +1150,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "fullName": {
+          "full_Name": {
             "type": "string",
             "nullable": true
           },
@@ -1117,6 +1172,10 @@
           },
           "isVerified": {
             "type": "boolean"
+          },
+          "nationalIdImage": {
+            "type": "string",
+            "nullable": true
           },
           "services": {
             "type": "array",
@@ -1360,7 +1419,7 @@
             "type": "integer",
             "format": "int32"
           },
-          "fullName": {
+          "full_Name": {
             "type": "string",
             "nullable": true
           },
@@ -1382,6 +1441,10 @@
           },
           "isVerified": {
             "type": "boolean"
+          },
+          "nationalIdImage": {
+            "type": "string",
+            "nullable": true
           },
           "complaintsFiled": {
             "type": "array",
@@ -1424,36 +1487,6 @@
             "items": {
               "$ref": "#/components/schemas/Application"
             },
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "RegisterUserDTO": {
-        "type": "object",
-        "properties": {
-          "userName": {
-            "type": "string",
-            "nullable": true
-          },
-          "password": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "phoneNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "role": {
-            "type": "string",
-            "nullable": true
-          },
-          "craft": {
-            "type": "string",
             "nullable": true
           }
         },

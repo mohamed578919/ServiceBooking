@@ -1,161 +1,272 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\",
+  "WorkspaceRootPath": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|h:\\my projects\\servicebooking-main\\servicebooking\\servicebooking\\logics\\complaintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\complaintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|h:\\my projects\\servicebooking-main\\servicebooking\\servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|h:\\my projects\\servicebooking-main\\servicebooking\\servicebooking\\dtos\\complaintcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\complaintcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|h:\\my projects\\servicebooking-main\\servicebooking\\servicebooking\\dtos\\requestupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\requestupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250819144707_asd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServiceBooking\\Migrations\\20250819144707_asd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\servicebooking.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\servicebooking.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\applicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\applicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\clientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\verifycodedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\verifycodedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/DESKTOP_75NNU9R/ecomercepro/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\servicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\servicescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\clientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|h:\\my projects\\servicebooking-main\\servicebooking\\servicebooking\\dtos\\requestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\requestcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|h:\\my projects\\servicebooking-main\\servicebooking\\servicebooking\\models\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\mycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-<<<<<<< HEAD
-=======
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\servicerequestdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\servicerequestdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\applicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\applicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\servicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\servicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\application.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\createapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\createapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\createservicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\createservicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\complaintcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\complaintcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\providerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\dtos\\providerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\providerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\euserstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\euserstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\request.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\updateapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\updateapplicationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\chatmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\updateservicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\updateservicerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\migrations\\20250822054430_migv03.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250822054430_migv03.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\provider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\controllers\\paymenttransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\paymenttransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\paymenttransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\migrations\\20250809202456_createdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250809202456_createdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\source\\repos\\servicebookingfi\\servicebooking\\migrations\\20250810063641_auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250810063641_auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\migrations\\20250822024200_migv02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250822024200_migv02.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\paymenttransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\requestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\complaint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alprof\\Downloads\\ServiceBooking\\ServiceBooking\\Migrations\\20250822010117_migV01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\servicerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\providerskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\providerskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\providerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\providerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\providerapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\providerapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\models\\conversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\models\\conversation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\iserviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\serviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\requestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\icurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\icurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\complaintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\complaintservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\chatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\logics\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\logics\\applicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\servicecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\servicecreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\serviceupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\serviceupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250821082738_alibaba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250821082244_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\enums\\complaintseverity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\enums\\complaintseverity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\complaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\complaintdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\sendmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\sendmessagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\providersearchquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\providersearchquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\dtos\\applicationitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\dtos\\applicationitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\enums\\applicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\enums\\applicationstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\enums\\requeststatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820224643_ali.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820221651_add-migration andro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820221048_andro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\migrations\\20250822011820_migv01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250822011820_migv01.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\migrations\\20250822234152_theend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250822234152_theend.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|c:\\users\\androw\\downloads\\servicebooking\\servicebooking\\servicebooking\\migrations\\20250823170632_aer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84149631-D481-4D0F-BFC6-347D1CAF7BC8}|ServiceBooking\\ServiceBooking.csproj|solutionrelative:servicebooking\\migrations\\20250823170632_aer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -165,130 +276,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 12,
           "Children": [
-            {
-=======
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Client.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Client.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Client.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:57:11.908Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250819144707_asd.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250819144707_asd.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250819144707_asd.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250819144707_asd.cs",
-              "RelativeToolTip": "ServiceBooking\\Migrations\\20250819144707_asd.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvxoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T14:47:08.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ServiceBooking",
-              "DocumentMoniker": "C:\\Users\\androw\\Source\\Repos\\ServiceBookingfi\\ServiceBooking\\ServiceBooking.csproj",
-              "RelativeDocumentMoniker": "ServiceBooking\\ServiceBooking.csproj",
-              "ToolTip": "C:\\Users\\androw\\Source\\Repos\\ServiceBookingfi\\ServiceBooking\\ServiceBooking.csproj",
-              "RelativeToolTip": "ServiceBooking\\ServiceBooking.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-19T14:39:06.435Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationDTO.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ApplicationDTO.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ApplicationDTO.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ApplicationDTO.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\ApplicationDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T14:10:37.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T14:16:55.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAwDgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T16:38:25.812Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterUserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\RegisterUserDTO.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RegisterUserDTO.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\RegisterUserDTO.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\RegisterUserDTO.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAA9wBAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T14:10:49.95Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Program.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Program.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Program.cs",
-              "RelativeToolTip": "ServiceBooking\\Program.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAwFcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:12:39.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "VerifyCodeDTO.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\VerifyCodeDTO.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\VerifyCodeDTO.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\VerifyCodeDTO.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\VerifyCodeDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T14:10:31.639Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -310,400 +299,818 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
->>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
-<<<<<<< HEAD
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ComplaintService.cs",
-              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Logics\\ComplaintService.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ComplaintService.cs",
-              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Logics\\ComplaintService.cs",
-              "RelativeToolTip": "ServiceBooking\\Logics\\ComplaintService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAMwBUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T18:21:37.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-=======
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AdminDto.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\AdminDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\AdminDto.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\AdminDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\AdminDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:42:10.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClientDto.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ClientDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ClientDto.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ClientDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\ClientDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:10:42.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.AspNetUsers.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/DESKTOP_75NNU9R/ecomercepro/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/DESKTOP_75NNU9R/ecomercepro/True/SqlTable/dbo.AspNetUsers.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-08-18T16:08:43.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\appsettings.json",
-              "RelativeDocumentMoniker": "ServiceBooking\\appsettings.json",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\appsettings.json",
-              "RelativeToolTip": "ServiceBooking\\appsettings.json",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-22T15:11:35.657Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\AdminController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwC4AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:39:02.678Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "20250810063641_auth.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250810063641_auth.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250810063641_auth.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250810063641_auth.cs",
-              "RelativeToolTip": "ServiceBooking\\Migrations\\20250810063641_auth.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-10T06:36:41.855Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
->>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
-              "Title": "ComplaintController.cs",
-              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Controllers\\ComplaintController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ComplaintController.cs",
-              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Controllers\\ComplaintController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\ComplaintController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2025-08-20T18:19:57.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ComplaintCreateDto.cs",
-              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
-              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Title": "RequestsController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\RequestsController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\RequestsController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\RequestsController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\RequestsController.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAAALMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T18:15:47.811Z",
+              "WhenOpened": "2025-08-20T22:54:08.407Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "RequestUpdateDto.cs",
-              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\DTOs\\RequestUpdateDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RequestUpdateDto.cs",
-              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\DTOs\\RequestUpdateDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\RequestUpdateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAAM4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T18:15:14.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RequestCreateDto.cs",
-              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\DTOs\\RequestCreateDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RequestCreateDto.cs",
-              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\DTOs\\RequestCreateDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\RequestCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T18:14:24.351Z",
+              "WhenOpened": "2025-08-20T22:18:37.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-=======
-              "WhenOpened": "2025-07-22T14:59:44.636Z"
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAFcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T08:55:50.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServicesController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ServicesController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ServicesController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ServicesController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ServicesController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAADwvycAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T00:38:31.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\appsettings.json",
+              "RelativeDocumentMoniker": "ServiceBooking\\appsettings.json",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\appsettings.json",
+              "RelativeToolTip": "ServiceBooking\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-20T21:26:44.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MyContext.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\MyContext.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\MyContext.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\MyContext.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\MyContext.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAAHEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:17:46.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T23:19:45.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationsController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ApplicationsController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:39:01.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T19:32:56.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceRequestDetailsDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceRequestDetailsDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceRequestDetailsDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceRequestDetailsDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceRequestDetailsDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAcwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:50:33.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDTO.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ApplicationDTO.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ApplicationDTO.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ApplicationDTO.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ApplicationDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:52:48.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServiceRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceRequestDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceRequestDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceRequestDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:43:49.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "20250823170632_aer.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250823170632_aer.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250823170632_aer.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250823170632_aer.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250823170632_aer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T17:06:33.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateApplicationDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\CreateApplicationDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\CreateApplicationDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\CreateApplicationDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\CreateApplicationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T08:48:21.939Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Service.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Service.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Service.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Service.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "CreateServiceRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\CreateServiceRequestDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\CreateServiceRequestDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\CreateServiceRequestDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\CreateServiceRequestDto.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwAYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:52:44.126Z"
+              "WhenOpened": "2025-08-21T19:40:23.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T21:44:10.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Application.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Application.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Application.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Application.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Application.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T22:16:10.768Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Admin.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Admin.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Admin.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "ComplaintCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ComplaintCreateDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:39:32.169Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "20250809202456_CreateDatabase.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250809202456_CreateDatabase.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250809202456_CreateDatabase.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Migrations\\20250809202456_CreateDatabase.cs",
-              "RelativeToolTip": "ServiceBooking\\Migrations\\20250809202456_CreateDatabase.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T20:24:57.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RequestDto.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\RequestDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RequestDto.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\RequestDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\RequestDto.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:09:57.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ClientController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\ClientController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ClientController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\ClientController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\ClientController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAADwv1UAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:37:57.954Z"
+              "WhenOpened": "2025-08-20T18:15:47.811Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Complaint.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Complaint.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Complaint.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Complaint.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Complaint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Title": "ProvidersController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ProvidersController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ProvidersController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ProvidersController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ProvidersController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAUwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T17:43:44.58Z"
+              "WhenOpened": "2025-08-20T23:04:55.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ServicesController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\ServicesController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ServicesController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\ServicesController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\ServicesController.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAADwv2UAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 66,
+              "Title": "20250822234152_theend.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822234152_theend.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250822234152_theend.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822234152_theend.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250822234152_theend.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:50:15.398Z"
+              "WhenOpened": "2025-08-22T23:41:55.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegisterUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\RegisterUserDTO.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RegisterUserDTO.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\RegisterUserDTO.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\RegisterUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T21:44:57.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Request.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Request.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Request.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Request.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Request.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAADwvykAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T17:57:00.493Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "ServiceDto.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ServiceDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceDto.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ServiceDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Title": "UpdateApplicationDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\UpdateApplicationDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\UpdateApplicationDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\UpdateApplicationDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\UpdateApplicationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:11:27.372Z"
+              "WhenOpened": "2025-08-22T02:34:10.918Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "Request.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Request.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Request.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Request.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Request.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAkwBoAAAAAAAAAAAAAAA==",
+              "Title": "ChatMessage.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ChatMessage.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ChatMessage.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ChatMessage.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\ChatMessage.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:53:37.1Z"
+              "WhenOpened": "2025-08-21T07:16:50.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Client.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Client.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAgAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:11:24.612Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "Application.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Application.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Application.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Application.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Application.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Title": "UpdateServiceRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\UpdateServiceRequestDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\UpdateServiceRequestDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\UpdateServiceRequestDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\UpdateServiceRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:53:54.812Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
->>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
-              "Title": "MyContext.cs",
-              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Models\\MyContext.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\MyContext.cs",
-              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Models\\MyContext.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\MyContext.cs",
-<<<<<<< HEAD
-              "ViewState": "AgIAAEwAAAAAAAAAAAAmwFIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T14:21:07.092Z",
-              "EditorCaption": ""
-=======
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:14:41.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:49:06.455Z"
+              "WhenOpened": "2025-08-21T19:54:04.614Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\User.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\User.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\User.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAgwAkAAAAeAAAAAAAAAA==",
+              "Title": "Provider.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Provider.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Provider.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Provider.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Provider.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:52:08.258Z"
+              "WhenOpened": "2025-08-21T07:12:14.8Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "20250822054430_migV03.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822054430_migV03.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250822054430_migV03.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822054430_migV03.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250822054430_migV03.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T05:44:31.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Service.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Service.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Service.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T23:22:36.467Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "ProvidersController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\ProvidersController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ProvidersController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\ProvidersController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\ProvidersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "PaymentTransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T15:38:32.203Z"
+              "WhenOpened": "2025-08-21T19:26:27.26Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "ProviderDto.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ProviderDto.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ProviderDto.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\DTOs\\ProviderDto.cs",
-              "RelativeToolTip": "ServiceBooking\\DTOs\\ProviderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA4AAAAAAAAAA==",
+              "Title": "ComplaintController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ComplaintController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\ComplaintController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\ComplaintController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\ComplaintController.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAcwDQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-26T20:32:11.987Z"
+              "WhenOpened": "2025-08-20T18:19:57.886Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "EUserState.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\EUserState.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\EUserState.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\EUserState.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\EUserState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "20250822024200_migV02.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822024200_migV02.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250822024200_migV02.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822024200_migV02.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250822024200_migV02.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:54:57.03Z"
+              "WhenOpened": "2025-08-22T02:42:00.875Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "Provider.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Provider.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Provider.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\Provider.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\Provider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Title": "PaymentTransaction.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\PaymentTransaction.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\PaymentTransaction.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\PaymentTransaction.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\PaymentTransaction.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:57:32.611Z"
+              "WhenOpened": "2025-08-21T19:13:48Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "PaymentTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\PaymentTransaction.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Models\\PaymentTransaction.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Models\\PaymentTransaction.cs",
-              "RelativeToolTip": "ServiceBooking\\Models\\PaymentTransaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Title": "RequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\RequestDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\RequestDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\RequestDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\RequestDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:58:33.53Z"
+              "WhenOpened": "2025-08-22T02:27:14.602Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "PaymentTransactionController.cs",
-              "DocumentMoniker": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
-              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
-              "ToolTip": "C:\\Users\\androw\\source\\repos\\ServiceBookingfi\\ServiceBooking\\Controllers\\PaymentTransactionController.cs",
-              "RelativeToolTip": "ServiceBooking\\Controllers\\PaymentTransactionController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "ServiceBooking\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T14:59:06.435Z"
->>>>>>> bca8e2c23ae9631e32ba7ebf9db1ee2c3a93e3cd
+              "WhenOpened": "2025-08-22T00:38:42.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "20250822011820_migV01.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822011820_migV01.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Migrations\\20250822011820_migV01.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Migrations\\20250822011820_migV01.cs",
+              "RelativeToolTip": "ServiceBooking\\Migrations\\20250822011820_migV01.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:18:22.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "20250822010117_migV01.cs",
+              "DocumentMoniker": "C:\\Users\\alprof\\Downloads\\ServiceBooking\\ServiceBooking\\Migrations\\20250822010117_migV01.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\alprof\\Downloads\\ServiceBooking\\ServiceBooking\\Migrations\\20250822010117_migV01.cs",
+              "ToolTip": "C:\\Users\\alprof\\Downloads\\ServiceBooking\\ServiceBooking\\Migrations\\20250822010117_migV01.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\alprof\\Downloads\\ServiceBooking\\ServiceBooking\\Migrations\\20250822010117_migV01.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T01:01:19.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\User.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\User.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:19:49.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Complaint.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Complaint.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Complaint.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Complaint.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Complaint.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:55:44.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ServiceRequest.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ServiceRequest.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ServiceRequest.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ServiceRequest.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\ServiceRequest.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAAcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:14:21.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProviderSkill.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ProviderSkill.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ProviderSkill.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ProviderSkill.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\ProviderSkill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:13:02.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ProviderService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ProviderService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ProviderService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ProviderService.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\ProviderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T19:20:45.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ProviderApplication.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ProviderApplication.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\ProviderApplication.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\ProviderApplication.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\ProviderApplication.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:15:34.073Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Conversation.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Conversation.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Models\\Conversation.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Models\\Conversation.cs",
+              "RelativeToolTip": "ServiceBooking\\Models\\Conversation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:16:10.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Program.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Program.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Program.cs",
+              "RelativeToolTip": "ServiceBooking\\Program.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAGkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:41:29.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\IServiceService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\IServiceService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\IServiceService.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\IServiceService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T00:36:15.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "RequestService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\RequestService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\RequestService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\RequestService.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\RequestService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:33:38.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ICurrentUser.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ICurrentUser.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ICurrentUser.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ICurrentUser.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\ICurrentUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:32:23.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "CurrentUser.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\CurrentUser.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\CurrentUser.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\CurrentUser.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\CurrentUser.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:32:51.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ComplaintService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ComplaintService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ComplaintService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ComplaintService.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\ComplaintService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T08:11:42.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ChatService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ChatService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ChatService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ChatService.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\ChatService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAswCYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:36:37.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ServiceService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ServiceService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ServiceService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ServiceService.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\ServiceService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T15:42:19.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ChatHub.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ChatHub.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\ChatHub.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:40:17.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "ApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ApplicationService.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Logics\\ApplicationService.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Logics\\ApplicationService.cs",
+              "RelativeToolTip": "ServiceBooking\\Logics\\ApplicationService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAswBsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:35:27.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ServiceCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceCreateDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceCreateDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceCreateDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceCreateDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T23:34:35.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "ServiceUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceUpdateDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ServiceUpdateDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ServiceUpdateDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ServiceUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T16:10:04.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "20250821082738_alibaba.cs",
+              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250821082738_alibaba.cs",
+              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250821082738_alibaba.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T08:27:38.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "20250821082244_InitialCreate.cs",
+              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250821082244_InitialCreate.cs",
+              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250821082244_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T08:22:44.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ComplaintSeverity.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Enums\\ComplaintSeverity.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Enums\\ComplaintSeverity.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Enums\\ComplaintSeverity.cs",
+              "RelativeToolTip": "ServiceBooking\\Enums\\ComplaintSeverity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T08:09:24.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ComplaintDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ComplaintDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ComplaintDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ComplaintDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ComplaintDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:55:29.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "SendMessageDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\SendMessageDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\SendMessageDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\SendMessageDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\SendMessageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:31:05.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ProviderSearchQuery.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ProviderSearchQuery.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ProviderSearchQuery.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ProviderSearchQuery.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ProviderSearchQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:30:35.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ApplicationItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ApplicationItemDto.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\DTOs\\ApplicationItemDto.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\DTOs\\ApplicationItemDto.cs",
+              "RelativeToolTip": "ServiceBooking\\DTOs\\ApplicationItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:30:08.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ApplicationStatus.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Enums\\ApplicationStatus.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Enums\\ApplicationStatus.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Enums\\ApplicationStatus.cs",
+              "RelativeToolTip": "ServiceBooking\\Enums\\ApplicationStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:08:01.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "RequestStatus.cs",
+              "DocumentMoniker": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Enums\\RequestStatus.cs",
+              "RelativeDocumentMoniker": "ServiceBooking\\Enums\\RequestStatus.cs",
+              "ToolTip": "C:\\Users\\androw\\Downloads\\ServiceBooking\\ServiceBooking\\ServiceBooking\\Enums\\RequestStatus.cs",
+              "RelativeToolTip": "ServiceBooking\\Enums\\RequestStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T07:06:54.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "20250820224643_ali.cs",
+              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820224643_ali.cs",
+              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820224643_ali.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T22:46:44.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20250820221651_add-migration andro.cs",
+              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820221651_add-migration andro.cs",
+              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820221651_add-migration andro.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T22:16:51.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "20250820221048_andro.cs",
+              "DocumentMoniker": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820221048_andro.cs",
+              "ToolTip": "H:\\my projects\\ServiceBooking-main\\ServiceBooking\\ServiceBooking\\Migrations\\20250820221048_andro.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T22:10:49.011Z"
             }
           ]
         }

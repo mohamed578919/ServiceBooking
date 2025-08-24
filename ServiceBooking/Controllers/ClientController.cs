@@ -11,7 +11,7 @@ namespace ServiceBooking.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Client")]
+    //[Authorize(Roles = "Client")]
     public class ClientController : ControllerBase
     {
         private readonly MyContext _context;
@@ -23,96 +23,87 @@ namespace ServiceBooking.Controllers
             _userManager = userManager;
         }
 
-        // 1️⃣ يعمل Request جديد
-        [HttpPost("CreateRequest")]
-        public async Task<IActionResult> CreateRequest([FromBody] Request requestDto)
+
+
+        //=====================================================
+        // ✅ تجيب كل الكلاينتات
+        [HttpGet("GetAllClients")]
+        //[Authorize] // ممكن تخليها Admin بس
+        public async Task<IActionResult> GetAllClients()
         {
-            var user = await _userManager.GetUserAsync(User);
+            var clients = await _context.Clients
+                .Include(c => c.User)
+                .Include(c => c.Requests)
+                .ToListAsync();
+
+            var result = clients.Select(c => new
+            {
+                c.Id,
+                c.UserId,
+                FullName = c.User.Full_Name,
+                Email = c.User.Email,
+                Phone = c.User.PhoneNumber,
+                Role = c.User.Role,
+                Status = c.User.Status,
+                RequestsCount = c.Requests.Count
+            });
+
+            return Ok(result);
+        }
+
+        //=====================================================
+        //  تجيب الكلاينت الحالي
+        [HttpGet("me")]
+        //[Authorize(Roles = "Client")]
+        public async Task<IActionResult> GetCurrentClient([FromQuery] string ClientUserNamed)
+        {
+            var user = await _context.Users
+        .FirstOrDefaultAsync(u => u.UserName == ClientUserNamed);
 
             if (user == null)
-                return Unauthorized();
+                return NotFound("User not found");
 
-            var request = new Request
+            var client = await _context.Clients
+                .FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+            if (client == null)
+                return NotFound("Client not found");
+
+            var clientId = client.Id;
+
+            var _client = await _context.Clients
+                .Include(c => c.User)
+                .Include(c => c.Requests)
+                .FirstOrDefaultAsync(c => c.Id == clientId);
+
+            if (client == null)
+                return NotFound("Client profile not found");
+
+            var result = new
             {
-                Title = requestDto.Title,
-                Description = requestDto.Description,
-                ClientId = user.Id
+                client.Id,
+                client.UserId,
+                FullName = client.User.Full_Name,
+                Email = client.User.Email,
+                Phone = client.User.PhoneNumber,
+                Role = client.User.Role,
+                Status = client.User.Status,
+                Requests = client.Requests.Select(r => new
+                {
+                    r.Id,
+                    r.Title,
+                    r.Category,
+                    r.Budget,
+                    r.CreatedAt
+                })
             };
 
-            _context.Requests.Add(request);
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Request created successfully", request });
+            return Ok(result);
         }
 
-        // 2️⃣ يجيب Requests بتاعته
-        [HttpGet("MyRequests")]
-        public async Task<IActionResult> GetMyRequests()
-        {
-            var user = await _userManager.GetUserAsync(User);
 
-            if (user == null)
-                return Unauthorized();
 
-            var requests = await _context.Requests
-                .Where(r => r.ClientId == user.Id)
-                .Include(r => r.Applications)
-                .ToListAsync();
 
-            return Ok(requests);
-        }
-
-        // 3️⃣ يعدل Request بتاعه
-        [HttpPut("UpdateRequest/{id}")]
-        public async Task<IActionResult> UpdateRequest(int id, [FromBody] Request updatedRequest)
-        {
-            var user = await _userManager.GetUserAsync(User);
-
-            var request = await _context.Requests.FirstOrDefaultAsync(r => r.Id == id && r.ClientId == user.Id);
-
-            if (request == null)
-                return NotFound("Request not found or you don't own it.");
-
-            request.Title = updatedRequest.Title;
-            request.Description = updatedRequest.Description;
-
-            _context.Requests.Update(request);
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Request updated successfully", request });
-        }
-
-        // 4️⃣ يمسح Request بتاعه
-        [HttpDelete("DeleteRequest/{id}")]
-        public async Task<IActionResult> DeleteRequest(int id)
-        {
-            var user = await _userManager.GetUserAsync(User);
-
-            var request = await _context.Requests.FirstOrDefaultAsync(r => r.Id == id && r.ClientId == user.Id);
-
-            if (request == null)
-                return NotFound("Request not found or you don't own it.");
-
-            _context.Requests.Remove(request);
-            await _context.SaveChangesAsync();
-
-            return Ok(new { message = "Request deleted successfully" });
-        }
-
-        // 5️⃣ يتابع الـ Applications اللي اتقدمت له (على الـ Requests بتاعته)
-        [HttpGet("ApplicationsForMyRequests")]
-        public async Task<IActionResult> GetApplicationsForMyRequests()
-        {
-            var user = await _userManager.GetUserAsync(User);
-
-            var applications = await _context.Applications
-                .Include(a => a.Provider)
-                .Include(a => a.Request)
-                .Where(a => a.Request.ClientId == user.Id)
-                .ToListAsync();
-
-            return Ok(applications);
-        }
 
     }
 

@@ -7,7 +7,6 @@ namespace ServiceBooking.DTOs
         public int Id { get; set; }
         public string Title { get; set; } = null!;
         public string Description { get; set; } = null!;
-        public ComplaintSeverity Severity { get; set; }
         public ComplaintStatus Status { get; set; }
         public DateTime CreatedAtUtc { get; set; }
         public DateTime? UpdatedAtUtc { get; set; }

@@ -8,41 +8,31 @@ namespace ServiceBooking.Models
     {
         public int Id { get; set; }
 
-        [Required, MaxLength(180)]
-        public string Title { get; set; } = null!;
-
-        [Required, MaxLength(4000)]
-        public string Description { get; set; } = null!;
-
-        // ممكن تخزّن اسم ملف أو مسار
-        [MaxLength(500)]
-        public string? AttachmentPath { get; set; }
-
+        // مين اللي اشتكى (Client أو Provider)
+       
+        // بيانات الشكوى
+        public string Title { get; set; }
+        public string Description { get; set; }
         public ComplaintSeverity Severity { get; set; } = ComplaintSeverity.Medium;
-        public ComplaintStatus Status { get; set; } = ComplaintStatus.Open;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public bool Resolved { get; set; } = false;
 
-        public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
-        public DateTime? UpdatedAtUtc { get; set; }
+        //================================================
+        public int RequestId { get; set; }
+        public Request Request { get; set; } = default!;
 
-        [MaxLength(2000)]
-        public string? AdminNotes { get; set; }
 
-        // علاقات واضحة لتفادي أخطاء EF
-        [Required]
-        public string FiledByUserId { get; set; } = null!;
-        public ApplicationUser FiledByUser { get; set; } = null!;
+        //================================================
 
-        [Required]
-        public string AgainstUserId { get; set; } = null!;
-        public ApplicationUser AgainstUser { get; set; } = null!;
+        public int ClientId { get; set; }
 
-        public string ClientId { get; set; }
-        public string ProviderId { get; set; }
-        public ApplicationUser Client { get; set; }
-        public ApplicationUser Provider { get; set; }
+        // Navigation Property للعميل
+        public Client Client { get; set; }
 
-        // علاقات اختيارية لربط الشكوى بطلب/خدمة
-        public int? RelatedRequestId { get; set; }
-        public int? RelatedServiceId { get; set; }
+        //=======================================
+
+
+        public int ProviderId { get; set; }
+        public Provider Provider { get; set; } = default!;
     }
 }

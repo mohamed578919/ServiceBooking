@@ -5,6 +5,7 @@ using ServiceBooking.DTOs;
 using ServiceBooking.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ServiceBooking.Controllers
 {
@@ -21,70 +22,76 @@ namespace ServiceBooking.Controllers
             _userManager = userManager;
         }
 
-        // ✅ Provider يشوف كل الـ Requests المتاحة
-        [HttpGet("{providerId}/available-requests")]
-        public async Task<IActionResult> GetAvailableRequests(string providerId)
+        [HttpGet("GetAllProviders")]
+        public async Task<IActionResult> GetAllProviders()
         {
-            var provider = await _userManager.FindByIdAsync(providerId);
-            if (provider == null)
-                return NotFound("Provider not found");
-
-            // هات كل الـ Requests اللي لسه مفيهاش Applications من الـ Provider ده
-            var requests = await _context.Requests
-                .Include(r => r.Client) // علشان يرجع بيانات العميل
-                .Include(r => r.Service) // علشان يرجع بيانات الخدمة
-                .Where(r => !_context.Applications
-                    .Any(a => a.RequestId == r.Id && a.ProviderId == providerId))
+            var providers = await _context.Providers
+                .Include(p => p.User) // علشان يجيب بيانات اليوزر المرتبط
+                .Select(p => new
+                {
+                    p.Id,
+                    p.DisplayName,
+                    p.Bio,
+                    p.Rating,
+                    UserId = p.UserId,
+                    FullName = p.User.Full_Name,
+                    Email = p.User.Email,
+                    Phone = p.User.PhoneNumber,
+                    Role = p.User.Role,
+                    Craft = p.User.Craft,
+                    Status = p.User.Status
+                })
                 .ToListAsync();
 
-            return Ok(requests);
+            return Ok(providers);
         }
 
-        // ✅ Provider يقدم Application على Request
-        [HttpPost("{providerId}/apply/{requestId}")]
-        public async Task<IActionResult> ApplyForRequest(string providerId, int requestId)
+
+
+
+        //=============================================================
+
+        [HttpGet("me")]
+        //[Authorize(Roles = "Provider")
+        public async Task<IActionResult> GetCurrentProvider([FromQuery] string ProviderUserName)
         {
-            var provider = await _userManager.FindByIdAsync(providerId);
-            var request = await _context.Requests.FindAsync(requestId);
+            var user = await _context.Users
+          .FirstOrDefaultAsync(u => u.UserName == ProviderUserName);
 
-            if (provider == null || request == null)
-                return NotFound("Provider or Request not found");
+            if (user == null)
+                return NotFound("User not found");
 
-            // تأكد إنه مش مقدم قبل كده
-            var exists = await _context.Applications
-                .AnyAsync(a => a.ProviderId == providerId && a.RequestId == requestId);
-            if (exists)
-                return BadRequest("Already applied for this request");
+            var Provider = await _context.Providers
+                .FirstOrDefaultAsync(c => c.UserId == user.Id);
 
-            var application = new Application
+            if (Provider == null)
+                return NotFound("Client not found");
+
+            var ProviderId = Provider.Id;
+
+            var provider = await _context.Providers
+                .Include(p => p.User)
+                .FirstOrDefaultAsync(p => p.Id == ProviderId);
+
+            if (provider == null)
+                return NotFound("Provider profile not found");
+
+            var dto = new
             {
-                ProviderId = providerId,
-                RequestId = requestId,
-                Status = "Pending",
-                AppliedAt = DateTime.UtcNow
+                provider.Id,
+                provider.DisplayName,
+                provider.Bio,
+                provider.Rating,
+                UserId = provider.UserId,
+                FullName = provider.User.Full_Name,
+                Email = provider.User.Email,
+                Phone = provider.User.PhoneNumber,
+                Role = provider.User.Role,
+                Craft = provider.User.Craft,
+                Status = provider.User.Status
             };
 
-            _context.Applications.Add(application);
-            await _context.SaveChangesAsync();
-
-            return Ok(application);
-        }
-
-        // ✅ Provider يشوف كل الـ Applications اللي قدمها
-        [HttpGet("{providerId}/applications")]
-        public async Task<ActionResult<IEnumerable<Application>>> GetProviderApplications(string providerId)
-        {
-            var provider = await _userManager.FindByIdAsync(providerId);
-            if (provider == null)
-                return NotFound("Provider not found");
-
-            var apps = await _context.Applications
-                .Include(a => a.Request)
-                .ThenInclude(r => r.Client)
-                .Where(a => a.ProviderId == providerId)
-                .ToListAsync();
-
-            return Ok(apps);
+            return Ok(dto);
         }
     }
 

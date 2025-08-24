@@ -9,10 +9,10 @@
         public string? Notes { get; set; }
 
         public string ClientId { get; set; }
-        public string ClientName { get; set; } = string.Empty;
+        public string? ClientName { get; set; } = string.Empty;
 
         public int ServiceId { get; set; }
-        public string ServiceName { get; set; } = string.Empty;
+        public string? ServiceName { get; set; } = string.Empty;
 
         public DateTime RequestDate { get; set; }
     }

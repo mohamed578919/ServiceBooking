@@ -11,7 +11,8 @@
         public string Password { get; set; }
 
         // هنا المشكلة 👇 لازم تبقى IFormFile مش string
-        public IFormFile? NationalIdImage { get; set; }// هيخزن URL أو Base64
+        public IFormFile? NationalIdImage { get; set; }// هيخزن URL أو Base64
+
 
     }
 }

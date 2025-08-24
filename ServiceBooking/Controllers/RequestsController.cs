@@ -1,7 +1,8 @@
-﻿using System.Security.Claims;
-using ApiDay1.Models;
+﻿using ApiDay1.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using ServiceBooking.DTOs;
 using ServiceBooking.Models;
 
@@ -10,115 +11,278 @@ using ServiceBooking.Models;
 public class RequestController : ControllerBase
 {
     private readonly MyContext _context;
-    public RequestController(MyContext context) => _context = context;
 
-    // POST: api/Requests
-    [HttpPost]
-    public async Task<IActionResult> Create([FromBody] RequestCreateDto dto)
+    public RequestController(MyContext context)
     {
-        if (!ModelState.IsValid) return BadRequest(ModelState);
+        _context = context;
+    }
 
-        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+    //[Authorize(Roles = "Client")]
+    [HttpPost("Create")]
+    public async Task<IActionResult> CreateRequest(CreateServiceRequestDto dto)
+    {
+        //var client = await _context.Clients
+        //    .Include(c => c.User)
+        //    .FirstOrDefaultAsync(c => c.User.UserName == dto.ClientUserNamed);
+
+        var user = await _context.Users
+        .FirstOrDefaultAsync(u => u.UserName == dto.ClientUserNamed);
+
+        if (user == null)
+            return NotFound("User not found");
+
+        var client = await _context.Clients
+            .FirstOrDefaultAsync(c => c.UserId == user.Id);
+
+        if (client == null)
+            return NotFound("Client not found");
+
+        var clientId = client.Id;
+
+
+        var Service = await _context.Services
+            .FirstOrDefaultAsync(s => s.Name == dto.Service);
+        if (Service == null)
+            return NotFound("Client not found");
+        var serviceId = Service.Id;
+
+
+        //if (client == null)
+        //    return NotFound("Client not found");
+
+        //var _clientId = client.Id; // ده الـ int ID بتاع Client
 
         var request = new Request
         {
             Title = dto.Title,
             Description = dto.Description,
-            ServiceId = dto.ServiceId,
-            Notes = dto.Notes,
-            RequestDate = DateTime.UtcNow,
-            Status = "Pending",
+            Category = dto.Service,
+            ServiceId = serviceId,
+            Budget = dto.Budget,
             ClientId = clientId
         };
 
         _context.Requests.Add(request);
         await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetById), new { id = request.Id }, request);
+
+        var resultDto = new ServiceRequestDto
+        {
+            Id = request.Id,
+            Title = request.Title,
+            Description = request.Description,
+            Category = request.Category,
+            Budget = request.Budget,
+            CreatedAt = request.CreatedAt,
+            ClientName = User.Identity.Name
+        };
+
+        return Ok(resultDto);
     }
 
-    // GET: api/Requests/my-requests
-    [HttpGet("my-requests")]
-    public async Task<IActionResult> MyRequests()
-    {
-        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
 
-        var my = await _context.Requests
-            .Include(r => r.Service)
-            .Where(r => r.ClientId == clientId)
-            .OrderByDescending(r => r.Id)
+
+    //========================================================================
+
+    [HttpGet("search")]
+    public async Task<IActionResult> SearchRequests([FromQuery] string keyword)
+    {
+        var query = _context.Requests.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(keyword))
+        {
+            query = query.Where(r => r.Title.Contains(keyword) ||
+                                     r.Description.Contains(keyword) ||
+                                     r.Category.Contains(keyword));
+        }
+
+        var results = await query
+            .Include(r => r.Client)
+             .ThenInclude(c => c.User)
+            .OrderByDescending(r => r.CreatedAt)
+            .Select(r => new ServiceRequestDto
+            {
+                Id = r.Id,
+                Title = r.Title,
+                Description = r.Description,
+                Category = r.Category,
+                Budget = r.Budget,
+                CreatedAt = r.CreatedAt,
+                ClientName = r.Client.User.Full_Name
+            })
             .ToListAsync();
 
-        return Ok(my);
+        return Ok(results);
     }
 
-    // GET: api/Requests/5
+
+
+    //===================================================
+
     [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetRequestDetails(int id)
     {
-        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+        var request = await _context.Requests
+            .Include(r => r.Client)
+             .ThenInclude(c => c.User)
+            .Include(r => r.Applications)
+                .ThenInclude(a => a.Provider)
+                .ThenInclude(p => p.User)
+            .FirstOrDefaultAsync(r => r.Id == id);
 
-        var r = await _context.Requests
-            .Include(x => x.Service)
-            .FirstOrDefaultAsync(x => x.Id == id && x.ClientId == clientId);
+        if (request == null) return NotFound();
 
-        return r is null ? NotFound() : Ok(r);
+        var dto = new ServiceRequestDetailsDto
+        {
+            Id = request.Id,
+            Title = request.Title,
+            Description = request.Description,
+            Category = request.Category,
+            Budget = request.Budget,
+            CreatedAt = request.CreatedAt,
+            ClientName = request.Client.User.Full_Name,
+            Applications = request.Applications.Select(a => new ApplicationDTO
+            {
+                ProviderName = a.Provider.User.Full_Name,
+                Message = a.Message,
+                PhoneNumber = a.phoneNumber
+
+
+            }).ToList()
+        };
+
+        return Ok(dto);
     }
 
-    // PUT: api/Requests/5
+
+    //===================================================================================
+
     [HttpPut("{id:int}")]
-    public async Task<IActionResult> Update(int id, [FromBody] RequestUpdateDto dto)
+    //[Authorize(Roles = "Client")]
+    public async Task<IActionResult> UpdateRequest(int id, [FromBody] UpdateServiceRequestDto dto)
     {
-        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+        var client = await _context.Clients
+            .Include(c => c.User)
+            .FirstOrDefaultAsync(c => c.User.UserName == dto.ClientUserNamed);
 
-        var r = await _context.Requests.FirstOrDefaultAsync(x => x.Id == id && x.ClientId == clientId);
-        if (r is null) return NotFound();
+        if (client == null)
+            return NotFound("Client not found");
 
-        r.Title = dto.Title;
-        r.Description = dto.Description;
-        r.ServiceId = dto.ServiceId;
-        r.Notes = dto.Notes;
-        r.RequestDate = dto.PreferredDate ?? r.RequestDate;
-        if (!string.IsNullOrWhiteSpace(dto.Status)) r.Status = dto.Status;
+        var clientId = client.Id; // ده الـ int ID بتاع Client
 
+        var request = await _context.Requests.FirstOrDefaultAsync(r => r.Id == id);
+
+        if (request == null)
+            return NotFound("Request not found");
+
+        if (request.ClientId != clientId)
+            return Forbid("You can only edit your own requests");
+
+        request.Title = dto.Title;
+        request.Description = dto.Description;
+        request.Budget = dto.Budget;
+
+
+        _context.Requests.Update(request);
         await _context.SaveChangesAsync();
-        return Ok(r);
+
+        return Ok();
     }
 
-    // DELETE: api/Requests/5
-    [HttpDelete("{id:int}")]
-    public async Task<IActionResult> Delete(int id)
+
+    //===============================================================
+    [HttpGet("{ClientUserNamed}")]
+    public async Task<IActionResult> GetMyRequests(string ClientUserNamed)
     {
-        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+        var client = await _context.Clients
+             .Include(c => c.User)
+             .FirstOrDefaultAsync(c => c.User.UserName == ClientUserNamed);
 
-        var r = await _context.Requests.FirstOrDefaultAsync(x => x.Id == id && x.ClientId == clientId);
-        if (r is null) return NotFound();
+        if (client == null)
+            return NotFound("Client not found");
 
-        _context.Requests.Remove(r);
-        await _context.SaveChangesAsync();
-        return Ok(new { message = "Deleted" });
-    }
+        var clientId = client.Id; // ده الـ int ID بتاع Client
 
-    // GET: api/Requests/5/applications  (يتابع التقديمات على الطلب بتاعه)
-    [HttpGet("{id:int}/applications")]
-    public async Task<IActionResult> GetApplications(int id)
-    {
-        var clientId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        if (string.IsNullOrEmpty(clientId)) return Unauthorized();
+       
 
-        var exists = await _context.Requests.AnyAsync(r => r.Id == id && r.ClientId == clientId);
-        if (!exists) return NotFound();
+        
 
-        var apps = await _context.Applications
-            .Include(a => a.Provider)
-            .Where(a => a.RequestId == id)
-            .OrderByDescending(a => a.AppliedAt)
+        // نجيب الريكويستات الخاصة بالعميل ده
+        var myRequests = await _context.Requests
+            .Where(r => r.ClientId == client.Id)
+            .Include(r => r.Client)
+                .ThenInclude(c => c.User)
+            .OrderByDescending(r => r.CreatedAt)
+            .Select(r => new ServiceRequestDto
+            {
+                Id = r.Id,
+                Title = r.Title,
+                Description = r.Description,
+                Category = r.Category,
+                Budget = r.Budget,
+                CreatedAt = r.CreatedAt,
+                ClientName = r.Client.User.Full_Name
+            })
             .ToListAsync();
 
-        return Ok(apps);
+        return Ok(myRequests);
     }
+
+    [HttpGet("Applications/{clientUserName}")]
+    public async Task<IActionResult> GetClientApplications(string clientUserName)
+    {
+        // نجيب العميل من الـ username
+        var client = await _context.Clients
+            .Include(c => c.User)
+            .FirstOrDefaultAsync(c => c.User.UserName == clientUserName);
+
+        if (client == null)
+            return NotFound("Client not found");
+
+        // نجيب كل الـ applications اللي جاية على الريكويستات بتاعته
+        var applications = await _context.Applications
+            .Include(a => a.Request)
+                .ThenInclude(r => r.Client)
+            .Include(a => a.Provider)
+                .ThenInclude(p => p.User)
+            .Where(a => a.Request.ClientId == client.Id)
+            .Select(a => new ApplicationDTO
+            {
+                ProviderName = a.Provider.User.Full_Name,
+                Message = a.Message,
+                PhoneNumber = a.phoneNumber,
+                // ممكن نضيف بيانات عن الـ Request نفسه
+                RequestTitle = a.Request.Title,
+                RequestId = a.Request.Id
+            })
+            .ToListAsync();
+
+        return Ok(applications);
+    }
+
+    //===================================================================
+
+    [HttpGet("All")]
+    //[Authorize] // لو عايز أي يوزر  
+    public async Task<IActionResult> GetAllRequests()
+    {
+        var requests = await _context.Requests
+            .Include(r => r.Client)
+                .ThenInclude(c => c.User)
+            .OrderByDescending(r => r.CreatedAt)
+            .Select(r => new ServiceRequestDto
+            {
+                Id = r.Id,
+                Title = r.Title,
+                Description = r.Description,
+                Category = r.Category,
+                Budget = r.Budget,
+                CreatedAt = r.CreatedAt,
+                ClientName = r.Client.User.Full_Name
+            })
+            .ToListAsync();
+
+        return Ok(requests);
+    }
+
+
 }

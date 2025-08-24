@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ApiDay1.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -14,13 +16,17 @@ namespace ServiceBooking.Controllers
     [ApiController]
     public class AccountController : ControllerBase
     {
+        private readonly MyContext _context;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IEmailService emailService;
+        private readonly IConfiguration config;
 
-        public AccountController(UserManager<ApplicationUser> userManager, IEmailService emailService)
+        public AccountController(MyContext context , UserManager<ApplicationUser> userManager, IEmailService emailService, IConfiguration config)
         {
+            _context = context;
             this.userManager = userManager;
             this.emailService = emailService;
+            this.config = config;
         }
 
         [HttpPost("Register")]
@@ -35,19 +41,18 @@ namespace ServiceBooking.Controllers
                 {
                     var fileName = Guid.NewGuid().ToString() + Path.GetExtension(userdto.NationalIdImage.FileName);
                     var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/nationalIds", fileName);
-
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await userdto.NationalIdImage.CopyToAsync(stream);
                     }
 
-                    imagePath = $"/nationalIds/{fileName}"; // URL للفرونت
+                    imagePath = $"/nationalIds/{fileName}";
                 }
 
                 var user = new ApplicationUser
                 {
                     UserName = userdto.UserName,
-                    FullName = userdto.FullName,
+                    Full_Name = userdto.FullName,
                     Email = userdto.Email,
                     PhoneNumber = userdto.PhoneNumber,
                     Role = userdto.Role,
@@ -56,13 +61,42 @@ namespace ServiceBooking.Controllers
                     IsVerified = false,
                     NationalIdImage = imagePath
                 };
-
                 var result = await userManager.CreateAsync(user, userdto.Password);
 
                 if (result.Succeeded)
                 {
                     await userManager.AddToRoleAsync(user, userdto.Role);
+
+                    // إضافة للـ profile حسب الدور
+                    if (userdto.Role == "Client")
+                    {
+                        var clientProfile = new Client
+                        {
+                            UserId = user.Id,
+                            User = user
+                        };
+
+                        _context.Clients.Add(clientProfile);
+                    }
+                    else if (userdto.Role == "Provider")
+                    {
+                        var providerProfile = new Provider
+                        {
+                            UserId = user.Id,
+                            User = user,
+                            DisplayName = user.Full_Name,
+                            Bio = userdto.Craft != null ? $"Specialized in {userdto.Craft}" : null
+                        };
+
+                        _context.Providers.Add(providerProfile);
+                    }
+
+                    await _context.SaveChangesAsync();
+
+
                     await emailService.SendEmailAsync(user.Email, "Verification Code", $"Your code is: {verificationCode}");
+
+                   
 
                     return Ok("User registered. Verification code sent to email.");
                 }
@@ -72,46 +106,36 @@ namespace ServiceBooking.Controllers
 
             return BadRequest(ModelState);
         }
-
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDTO userDTO)
         {
             var user = await userManager.FindByNameAsync(userDTO.UserName);
 
-            if (user == null)
-            {
+            if (user == null || !await userManager.CheckPasswordAsync(user, userDTO.Password))
                 return Unauthorized("Invalid username or password");
-            }
 
-          
             if (!user.IsVerified)
-            {
                 return Unauthorized("Please verify your account first by checking your email.");
-            }
-
-            if (!await userManager.CheckPasswordAsync(user, userDTO.Password))
-            {
-                return Unauthorized("Invalid username or password");
-            }
 
             var claims = new List<Claim>
-    {
-        new Claim(ClaimTypes.Name, user.UserName),
-        new Claim(ClaimTypes.NameIdentifier, user.Id),
-        new Claim("Role", user.Role),
-        new Claim("PhoneNumber", user.PhoneNumber ?? ""),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-    };
+            {
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim("Role", user.Role),
+                new Claim("PhoneNumber", user.PhoneNumber ?? ""),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+            };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SuperStrongKey_Androw2025_123456"));
+            var jwtSettings = config.GetSection("JWT");
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var token = new JwtSecurityToken(
-                issuer: "yourdomain.com",
-                audience: "yourdomain.com",
+                issuer: jwtSettings["Issuer"],
+                audience: jwtSettings["Audience"],
                 claims: claims,
-                expires: DateTime.Now.AddHours(1),
-                signingCredentials: creds
+                expires: DateTime.Now.AddDays(double.Parse(jwtSettings["DurationInDays"] ?? "1")),
+ signingCredentials: creds
             );
 
             var tokenString = new JwtSecurityTokenHandler().WriteToken(token);
@@ -121,12 +145,12 @@ namespace ServiceBooking.Controllers
                 token = tokenString,
                 user = new
                 {
-                    user.FullName,
+                    user.Full_Name,
                     user.UserName,
                     user.Role,
                     user.PhoneNumber,
                     user.Craft,
-                     user.NationalIdImage
+                    user.NationalIdImage
                 }
             });
         }
@@ -144,17 +168,20 @@ namespace ServiceBooking.Controllers
             if (user.VerificationCode == dto.Code)
             {
                 user.IsVerified = true;
-                user.VerificationCode = null; // حذف الكود بعد التفعيل
+                user.VerificationCode = null;
                 await userManager.UpdateAsync(user);
                 return Ok("Account verified successfully.");
             }
 
             return BadRequest("Invalid code.");
         }
+
+        [Authorize]
         [HttpGet("profile")]
         public async Task<IActionResult> GetProfile()
         {
             var userName = User.Identity?.Name;
+
             if (string.IsNullOrEmpty(userName))
                 return Unauthorized("User not logged in");
 
@@ -162,21 +189,19 @@ namespace ServiceBooking.Controllers
             if (user == null)
                 return NotFound("User not found");
 
+            var roles = await userManager.GetRolesAsync(user);
+
             return Ok(new
             {
-                user.FullName,
-                user.UserName,
-                user.Email,
-                user.PhoneNumber,
-                user.Role,
-                user.Craft,
-                user.NationalIdImage
+                FullName = user.Full_Name,
+                UserName = user.UserName,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                Role = roles.FirstOrDefault() ?? "User",
+                Craft = user.Craft,
+                NationalIdImage = user.NationalIdImage
             });
         }
-
-
-
-
 
     }
 }
